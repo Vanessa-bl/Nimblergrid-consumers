@@ -1,0 +1,17 @@
+# Env
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Go
+server/tmp/
+server/bin/
+CLAUDE.md
+AGENTS.md
