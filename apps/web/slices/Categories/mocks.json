@@ -1,0 +1,42 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"nav_categories": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "b7a1cda1-eeb5-4ea2-9cf2-e13285e289ce",
+						"value": [
+							[
+								"category_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "nearly",
+									"type": "Text"
+								}
+							],
+							[
+								"url",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Excepteur sunt dolore enim nisi consectetur in dolor sint voluptate magna aliquip. Esse consequat laborum id proident ea velit qui dolore est dolore cillum voluptate."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

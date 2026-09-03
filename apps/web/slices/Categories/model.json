@@ -1,0 +1,44 @@
+{
+  "id": "categories",
+  "type": "SharedSlice",
+  "name": "Categories",
+  "description": "Categories",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "nav_categories": {
+          "type": "Group",
+          "config": {
+            "label": "Nav categories",
+            "repeat": true,
+            "fields": {
+              "category_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Category name",
+                  "placeholder": ""
+                }
+              },
+              "url": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "URL",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "hyperlink"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
