@@ -2,6 +2,7 @@
 .env
 .env.*
 !.env.example
+!infra/env/*.env
 
 # OS
 .DS_Store
@@ -10,8 +11,31 @@
 .vscode/
 .idea/
 
-# Go
-server/tmp/
-server/bin/
-CLAUDE.md
-AGENTS.md
+# Claude Code local settings
+.claude/settings.local.json
+
+# Next.js auto-generated AI agent files
+apps/web/AGENTS.md
+apps/web/CLAUDE.md
+
+# Node / pnpm
+node_modules/
+.pnpm-store/
+
+# Turbo
+.turbo/
+
+# Next.js
+apps/web/.next/
+apps/admin/.next/
+
+# Magento
+infra/src/vendor/
+infra/src/generated/
+infra/src/pub/static/
+infra/src/var/
+infra/src/auth.json
+
+# Profiling / tunnels (contain secrets)
+infra/env/cloudflare.env
+infra/env/blackfire.env
