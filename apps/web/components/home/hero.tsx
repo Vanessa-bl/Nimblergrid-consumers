@@ -12,7 +12,7 @@ const SEARCH_MODES = [
 
 const titleComponents: JSXMapSerializer = {
   heading1: ({ children }) => (
-    <h1 className="mt-4 font-sans text-4xl font-semibold leading-[1.05] tracking-tight text-zinc-900 sm:text-5xl lg:text-[58px]">
+    <h1 className="mt-4 font-sans text-4xl font-semibold leading-[1.05] tracking-tight text-zinc-900 sm:text-[42px] lg:text-5xl">
       {children}
     </h1>
   ),
