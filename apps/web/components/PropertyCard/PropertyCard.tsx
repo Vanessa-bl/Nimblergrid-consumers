@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type TouchEvent } from "react";
+import { memo, useRef, useState, type TouchEvent } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { CheckboxControl } from "@/components/checkbox";
@@ -58,8 +58,7 @@ function GalleryImage({ image }: Readonly<GalleryImageProps>) {
       src={image.url}
       alt={image.alt || ""}
       fill
-      sizes="(max-width: 767px) 100vw, 33vw"
-      unoptimized
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
     />
   );
@@ -462,7 +461,6 @@ function PropertyFooter({
               alt=""
               width={40}
               height={40}
-              unoptimized
               className="h-10 w-10 shrink-0 rounded-full object-cover"
             />
           ) : (
@@ -529,7 +527,9 @@ function PropertyFooter({
   );
 }
 
-export function PropertyCard(props: Readonly<PropertyCardProps>) {
+export const PropertyCard = memo(function PropertyCard(
+  props: Readonly<PropertyCardProps>,
+) {
   const {
     property,
     onFavoriteToggle,
@@ -598,4 +598,4 @@ export function PropertyCard(props: Readonly<PropertyCardProps>) {
       </div>
     </article>
   );
-}
+});

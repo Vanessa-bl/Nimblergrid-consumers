@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { ChevronDownIcon } from "@/components/ui/icons/chevron-down";
 import { MapView } from "@/components/MapView/MapView";
 import { FiltersSidebar } from "@/components/filters/FiltersSidebar/FiltersSidebar";
@@ -186,6 +187,10 @@ export function SearchResultsLayout() {
   );
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [advanced, setAdvanced] = useState<AdvancedFilters>(EMPTY_ADVANCED);
+  const [selectedIds, setSelectedIds] = useState<ReadonlySet<string>>(
+    () => new Set(),
+  );
+  const selectedCount = selectedIds.size;
 
   const visibleItems = useMemo(() => {
     const matched = allItems.filter((item) =>
@@ -195,15 +200,21 @@ export function SearchResultsLayout() {
   }, [allItems, query, price, rooms, types, moveInDate, advanced, sort]);
 
   const visibleCount = visibleItems.length;
-  const favoriteCards = visibleItems.map((item) => {
-    const property = toProperty(item);
-    return {
-      ...property,
-      actions: { isFavorite: favoriteIds.has(property.id) },
-    };
-  });
 
-  const handleFavoriteToggle = (propertyId: string) => {
+  const propertiesById = useMemo(() => {
+    return new Map(allItems.map((item) => [item.id, toProperty(item)]));
+  }, [allItems]);
+
+  const favoriteCards = useMemo(() => {
+    return visibleItems.map((item) => {
+      const base = propertiesById.get(item.id) ?? toProperty(item);
+      const favorite = favoriteIds.has(item.id);
+      if (base.actions.isFavorite === favorite) return base;
+      return { ...base, actions: { isFavorite: favorite } };
+    });
+  }, [visibleItems, propertiesById, favoriteIds]);
+
+  const handleFavoriteToggle = useCallback((propertyId: string) => {
     setFavoriteIds((previous) => {
       const next = new Set(previous);
       if (next.has(propertyId)) {
@@ -213,7 +224,22 @@ export function SearchResultsLayout() {
       }
       return next;
     });
-  };
+  }, []);
+
+  const handleSelectionChange = useCallback(
+    (propertyId: string, selected: boolean) => {
+      setSelectedIds((previous) => {
+        const next = new Set(previous);
+        if (selected) {
+          next.add(propertyId);
+        } else {
+          next.delete(propertyId);
+        }
+        return next;
+      });
+    },
+    [],
+  );
 
   const showMap = viewMode === "map";
 
@@ -341,6 +367,20 @@ export function SearchResultsLayout() {
                     ? ` of ${allItems.length}`
                     : ""}
                 </p>
+                {selectedCount > 0 ? (
+                  <div className="mt-2 flex items-center gap-3 text-sm">
+                    <span className="font-semibold text-[#ff2056]">
+                      {selectedCount} selected
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedIds(new Set())}
+                      className="cursor-pointer font-medium text-zinc-500 underline-offset-2 hover:text-zinc-900 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500"
+                    >
+                      Clear selection
+                    </button>
+                  </div>
+                ) : null}
               </div>
               <label className="relative block">
                 <span className="sr-only">Sort by</span>
@@ -373,7 +413,9 @@ export function SearchResultsLayout() {
                     key={property.id}
                     property={property}
                     stacked={!showMap}
+                    selected={selectedIds.has(property.id)}
                     onFavoriteToggle={handleFavoriteToggle}
+                    onSelectionChange={handleSelectionChange}
                   />
                 ))}
               </div>
@@ -407,6 +449,32 @@ export function SearchResultsLayout() {
         onClearAll={handleSidebarClearAll}
         onClose={() => setSidebarOpen(false)}
       />
+
+      {selectedCount > 0 ? (
+        <div className="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4">
+          <div className="pointer-events-auto flex items-center gap-5 rounded-2xl border border-zinc-200 bg-white py-3 pl-5 pr-3 shadow-[0_16px_40px_-16px_rgba(24,24,27,0.35)]">
+            <div>
+              <p className="text-sm font-semibold text-zinc-900">
+                Consultar por varias
+              </p>
+              <p className="text-xs text-zinc-500">
+                {selectedCount}{" "}
+                {selectedCount === 1
+                  ? "propiedad seleccionada"
+                  : "propiedades seleccionadas"}
+              </p>
+            </div>
+            <Button
+              type="button"
+              variant="primary"
+              size="md"
+              onClick={() => undefined}
+            >
+              Consultar
+            </Button>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
