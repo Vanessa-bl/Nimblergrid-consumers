@@ -1,0 +1,1613 @@
+{
+ "store_code": "hallo_us",
+ "search_criteria": {
+  "page_size": 30,
+  "current_page": 1
+ },
+ "total_count": 30,
+ "items": [
+  {
+   "id": "TX-1001",
+   "name": "Bright 1-bed apartment in Timberline",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 1000,
+   "address": "120 Main St",
+   "neighborhood": "Timberline",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 48,
+   "rooms": 2,
+   "bedrooms": 1,
+   "bathrooms": 1,
+   "description": "Freshly updated unit with open layout, modern kitchen finishes and generous natural light throughout.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Marta Rossi",
+    "phone": "+1 817 555 0101"
+   },
+   "contact": {
+    "phone": "+1 817 555 1000",
+    "email": "leasing@hallodemo.com"
+   },
+   "coordinates": {
+    "lat": 32.93,
+    "lng": -97.14
+   },
+   "rent_special": true,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": true,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": "2026-10-01",
+   "listed_at": "2026-01-01"
+  },
+  {
+   "id": "TX-1002",
+   "name": "Modern 2-bed apartment in Dove Park",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 2750,
+   "address": "127 Oak Dr",
+   "neighborhood": "Dove Park",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 65,
+   "rooms": 3,
+   "bedrooms": 2,
+   "bathrooms": 4,
+   "description": "Well maintained property in a quiet neighborhood, close to parks, schools and everyday shopping.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Lucas Perez",
+    "phone": "+1 817 555 0102"
+   },
+   "contact": {
+    "phone": "+1 817 555 1001"
+   },
+   "coordinates": {
+    "lat": 32.942,
+    "lng": -97.129
+   },
+   "rent_special": false,
+   "price_reduced": true,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-02-04"
+  },
+  {
+   "id": "TX-1003",
+   "name": "Renovated 3-bed townhome in Sunset Pointe",
+   "status": "reserved",
+   "property_type": "Townhome",
+   "price": 2250,
+   "address": "134 Lakeview Ave",
+   "neighborhood": "Sunset Pointe",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 82,
+   "rooms": 4,
+   "bedrooms": 3,
+   "bathrooms": 3,
+   "description": "Move-in ready space featuring an efficient floor plan, new fixtures and low-maintenance living.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Hallo Realty",
+    "phone": "+1 817 555 0103"
+   },
+   "contact": {
+    "phone": "+1 817 555 1002"
+   },
+   "coordinates": {
+    "lat": 32.954,
+    "lng": -97.118
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": true,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-03-07"
+  },
+  {
+   "id": "TX-1004",
+   "name": "Cozy 4-bed condo in Old Union",
+   "status": "available",
+   "property_type": "Condo",
+   "price": 1750,
+   "address": "141 Cedar Blvd",
+   "neighborhood": "Old Union",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 99,
+   "rooms": 5,
+   "bedrooms": 4,
+   "bathrooms": 2,
+   "description": "Desirable corner property with premium finishes, ample storage and easy highway access.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Ana Gomez",
+    "phone": "+1 817 555 0104"
+   },
+   "contact": {
+    "phone": "+1 817 555 1003",
+    "whatsapp": "+1 817 555 1003"
+   },
+   "coordinates": {
+    "lat": 32.966,
+    "lng": -97.107
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": false,
+   "in_unit_laundry": false,
+   "furnished": true,
+   "available_from": null,
+   "listed_at": "2026-04-10"
+  },
+  {
+   "id": "TX-1005",
+   "name": "Spacious 5-bed home in Ridgewood",
+   "status": "available",
+   "property_type": "Single family",
+   "price": 1250,
+   "address": "148 Bella Ln",
+   "neighborhood": "Ridgewood",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 116,
+   "rooms": 6,
+   "bedrooms": 5,
+   "bathrooms": 1,
+   "description": "Freshly updated unit with open layout, modern kitchen finishes and generous natural light throughout.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Marta Rossi",
+    "phone": "+1 817 555 0101"
+   },
+   "contact": {
+    "phone": "+1 817 555 1004"
+   },
+   "coordinates": {
+    "lat": 32.978,
+    "lng": -97.096
+   },
+   "rent_special": true,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-05-13"
+  },
+  {
+   "id": "TX-1006",
+   "name": "Charming 1-bed apartment in White Chapel",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 3000,
+   "address": "155 Heritage Ct",
+   "neighborhood": "White Chapel",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 133,
+   "rooms": 2,
+   "bedrooms": 1,
+   "bathrooms": 4,
+   "description": "Well maintained property in a quiet neighborhood, close to parks, schools and everyday shopping.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Lucas Perez",
+    "phone": "+1 817 555 0102"
+   },
+   "contact": {
+    "phone": "+1 817 555 1005",
+    "email": "leasing@hallodemo.com"
+   },
+   "coordinates": {
+    "lat": 32.93,
+    "lng": -97.085
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": "2026-10-01",
+   "listed_at": "2026-06-16"
+  },
+  {
+   "id": "TX-1007",
+   "name": "Updated 2-bed townhome in Hidden Lakes",
+   "status": "available",
+   "property_type": "Townhome",
+   "price": 2500,
+   "address": "162 Sunset St",
+   "neighborhood": "Hidden Lakes",
+   "city": "Keller",
+   "country": "USA",
+   "area_m2": 150,
+   "rooms": 3,
+   "bedrooms": 2,
+   "bathrooms": 3,
+   "description": "Move-in ready space featuring an efficient floor plan, new fixtures and low-maintenance living.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Hallo Realty",
+    "phone": "+1 817 555 0103"
+   },
+   "contact": {
+    "phone": "+1 817 555 1006"
+   },
+   "coordinates": {
+    "lat": 32.942,
+    "lng": -97.14
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": true,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-07-19"
+  },
+  {
+   "id": "TX-1008",
+   "name": "Luxury 3-bed condo in Willow Hollow",
+   "status": "sold",
+   "property_type": "Condo",
+   "price": 2000,
+   "address": "169 Maple Dr",
+   "neighborhood": "Willow Hollow",
+   "city": "Keller",
+   "country": "USA",
+   "area_m2": 167,
+   "rooms": 4,
+   "bedrooms": 3,
+   "bathrooms": 2,
+   "description": "Desirable corner property with premium finishes, ample storage and easy highway access.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Ana Gomez",
+    "phone": "+1 817 555 0104"
+   },
+   "contact": {
+    "phone": "+1 817 555 1007",
+    "whatsapp": "+1 817 555 1007"
+   },
+   "coordinates": {
+    "lat": 32.954,
+    "lng": -97.129
+   },
+   "rent_special": false,
+   "price_reduced": true,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": "2026-11-15",
+   "listed_at": "2026-08-22"
+  },
+  {
+   "id": "TX-1009",
+   "name": "Bright 4-bed apartment in Silver Lake",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 1500,
+   "address": "176 Main Ave",
+   "neighborhood": "Silver Lake",
+   "city": "Grapevine",
+   "country": "USA",
+   "area_m2": 184,
+   "rooms": 5,
+   "bedrooms": 4,
+   "bathrooms": 1,
+   "description": "Freshly updated unit with open layout, modern kitchen finishes and generous natural light throughout.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Marta Rossi",
+    "phone": "+1 817 555 0101"
+   },
+   "contact": {
+    "phone": "+1 817 555 1008"
+   },
+   "coordinates": {
+    "lat": 32.966,
+    "lng": -97.118
+   },
+   "rent_special": true,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": true,
+   "furnished": true,
+   "available_from": null,
+   "listed_at": "2026-01-25"
+  },
+  {
+   "id": "TX-1010",
+   "name": "Modern 5-bed apartment in Bransford",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 1000,
+   "address": "183 Oak Blvd",
+   "neighborhood": "Bransford",
+   "city": "Colleyville",
+   "country": "USA",
+   "area_m2": 61,
+   "rooms": 6,
+   "bedrooms": 5,
+   "bathrooms": 4,
+   "description": "Well maintained property in a quiet neighborhood, close to parks, schools and everyday shopping.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Lucas Perez",
+    "phone": "+1 817 555 0102"
+   },
+   "contact": {
+    "phone": "+1 817 555 1009"
+   },
+   "coordinates": {
+    "lat": 32.978,
+    "lng": -97.107
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": false,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-02-28"
+  },
+  {
+   "id": "TX-1011",
+   "name": "Renovated 1-bed townhome in Lakeside",
+   "status": "available",
+   "property_type": "Townhome",
+   "price": 2750,
+   "address": "190 Lakeview Ln",
+   "neighborhood": "Lakeside",
+   "city": "Westlake",
+   "country": "USA",
+   "area_m2": 78,
+   "rooms": 2,
+   "bedrooms": 1,
+   "bathrooms": 3,
+   "description": "Move-in ready space featuring an efficient floor plan, new fixtures and low-maintenance living.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Hallo Realty",
+    "phone": "+1 817 555 0103"
+   },
+   "contact": {
+    "phone": "+1 817 555 1010",
+    "email": "leasing@hallodemo.com"
+   },
+   "coordinates": {
+    "lat": 32.93,
+    "lng": -97.096
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": "2026-10-01",
+   "listed_at": "2026-03-03"
+  },
+  {
+   "id": "TX-1012",
+   "name": "Cozy 2-bed condo in Sundance Square",
+   "status": "available",
+   "property_type": "Condo",
+   "price": 2250,
+   "address": "197 Cedar Ct",
+   "neighborhood": "Sundance Square",
+   "city": "Fort Worth",
+   "country": "USA",
+   "area_m2": 95,
+   "rooms": 3,
+   "bedrooms": 2,
+   "bathrooms": 2,
+   "description": "Desirable corner property with premium finishes, ample storage and easy highway access.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Ana Gomez",
+    "phone": "+1 817 555 0104"
+   },
+   "contact": {
+    "phone": "+1 817 555 1011",
+    "whatsapp": "+1 817 555 1011"
+   },
+   "coordinates": {
+    "lat": 32.775,
+    "lng": -97.348
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": true,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-04-06"
+  },
+  {
+   "id": "TX-1013",
+   "name": "Spacious 3-bed home in Timberline",
+   "status": "available",
+   "property_type": "Single family",
+   "price": 1750,
+   "address": "204 Bella St",
+   "neighborhood": "Timberline",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 112,
+   "rooms": 4,
+   "bedrooms": 3,
+   "bathrooms": 1,
+   "description": "Freshly updated unit with open layout, modern kitchen finishes and generous natural light throughout.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Marta Rossi",
+    "phone": "+1 817 555 0101"
+   },
+   "contact": {
+    "phone": "+1 817 555 1012"
+   },
+   "coordinates": {
+    "lat": 32.954,
+    "lng": -97.14
+   },
+   "rent_special": true,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": true,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-05-09"
+  },
+  {
+   "id": "TX-1014",
+   "name": "Charming 4-bed apartment in Dove Park",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 1250,
+   "address": "211 Heritage Dr",
+   "neighborhood": "Dove Park",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 129,
+   "rooms": 5,
+   "bedrooms": 4,
+   "bathrooms": 4,
+   "description": "Well maintained property in a quiet neighborhood, close to parks, schools and everyday shopping.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Lucas Perez",
+    "phone": "+1 817 555 0102"
+   },
+   "contact": {
+    "phone": "+1 817 555 1013"
+   },
+   "coordinates": {
+    "lat": 32.966,
+    "lng": -97.129
+   },
+   "rent_special": false,
+   "price_reduced": true,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": true,
+   "furnished": true,
+   "available_from": null,
+   "listed_at": "2026-06-12"
+  },
+  {
+   "id": "TX-1015",
+   "name": "Updated 5-bed townhome in Old Union",
+   "status": "available",
+   "property_type": "Townhome",
+   "price": 3000,
+   "address": "218 Sunset Ave",
+   "neighborhood": "Old Union",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 146,
+   "rooms": 6,
+   "bedrooms": 5,
+   "bathrooms": 3,
+   "description": "Move-in ready space featuring an efficient floor plan, new fixtures and low-maintenance living.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Hallo Realty",
+    "phone": "+1 817 555 0103"
+   },
+   "contact": {
+    "phone": "+1 817 555 1014"
+   },
+   "coordinates": {
+    "lat": 32.978,
+    "lng": -97.118
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": "2026-11-15",
+   "listed_at": "2026-07-15"
+  },
+  {
+   "id": "TX-1016",
+   "name": "Luxury 1-bed condo in Harbor Point",
+   "status": "available",
+   "property_type": "Condo",
+   "price": 2500,
+   "address": "225 Maple Blvd",
+   "neighborhood": "Harbor Point",
+   "city": "Grapevine",
+   "country": "USA",
+   "area_m2": 163,
+   "rooms": 2,
+   "bedrooms": 1,
+   "bathrooms": 2,
+   "description": "Desirable corner property with premium finishes, ample storage and easy highway access.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Ana Gomez",
+    "phone": "+1 817 555 0104"
+   },
+   "contact": {
+    "phone": "+1 817 555 1015",
+    "whatsapp": "+1 817 555 1015",
+    "email": "leasing@hallodemo.com"
+   },
+   "coordinates": {
+    "lat": 32.93,
+    "lng": -97.107
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": false,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": "2026-10-01",
+   "listed_at": "2026-08-18"
+  },
+  {
+   "id": "TX-1017",
+   "name": "Bright 2-bed apartment in Sunset Pointe",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 2000,
+   "address": "232 Main Ln",
+   "neighborhood": "Sunset Pointe",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 180,
+   "rooms": 3,
+   "bedrooms": 2,
+   "bathrooms": 1,
+   "description": "Freshly updated unit with open layout, modern kitchen finishes and generous natural light throughout.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Marta Rossi",
+    "phone": "+1 817 555 0101"
+   },
+   "contact": {
+    "phone": "+1 817 555 1016"
+   },
+   "coordinates": {
+    "lat": 32.942,
+    "lng": -97.096
+   },
+   "rent_special": true,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-01-21"
+  },
+  {
+   "id": "TX-1018",
+   "name": "Modern 3-bed apartment in Bear Creek",
+   "status": "rented",
+   "property_type": "Apartment",
+   "price": 1500,
+   "address": "239 Oak Ct",
+   "neighborhood": "Bear Creek",
+   "city": "Keller",
+   "country": "USA",
+   "area_m2": 57,
+   "rooms": 4,
+   "bedrooms": 3,
+   "bathrooms": 4,
+   "description": "Well maintained property in a quiet neighborhood, close to parks, schools and everyday shopping.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Lucas Perez",
+    "phone": "+1 817 555 0102"
+   },
+   "contact": {
+    "phone": "+1 817 555 1017"
+   },
+   "coordinates": {
+    "lat": 32.954,
+    "lng": -97.085
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-02-24"
+  },
+  {
+   "id": "TX-1019",
+   "name": "Renovated 4-bed townhome in Heritage",
+   "status": "available",
+   "property_type": "Townhome",
+   "price": 1000,
+   "address": "246 Lakeview St",
+   "neighborhood": "Heritage",
+   "city": "Colleyville",
+   "country": "USA",
+   "area_m2": 74,
+   "rooms": 5,
+   "bedrooms": 4,
+   "bathrooms": 3,
+   "description": "Move-in ready space featuring an efficient floor plan, new fixtures and low-maintenance living.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Hallo Realty",
+    "phone": "+1 817 555 0103"
+   },
+   "contact": {
+    "phone": "+1 817 555 1018"
+   },
+   "coordinates": {
+    "lat": 32.966,
+    "lng": -97.14
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": true,
+   "in_unit_laundry": false,
+   "furnished": true,
+   "available_from": null,
+   "listed_at": "2026-03-27"
+  },
+  {
+   "id": "TX-1020",
+   "name": "Cozy 5-bed condo in Solana",
+   "status": "available",
+   "property_type": "Condo",
+   "price": 2750,
+   "address": "253 Cedar Dr",
+   "neighborhood": "Solana",
+   "city": "Westlake",
+   "country": "USA",
+   "area_m2": 91,
+   "rooms": 6,
+   "bedrooms": 5,
+   "bathrooms": 2,
+   "description": "Desirable corner property with premium finishes, ample storage and easy highway access.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Ana Gomez",
+    "phone": "+1 817 555 0104"
+   },
+   "contact": {
+    "phone": "+1 817 555 1019",
+    "whatsapp": "+1 817 555 1019"
+   },
+   "coordinates": {
+    "lat": 32.978,
+    "lng": -97.129
+   },
+   "rent_special": false,
+   "price_reduced": true,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-04-02"
+  },
+  {
+   "id": "TX-1021",
+   "name": "Spacious 1-bed home in Ridgewood",
+   "status": "available",
+   "property_type": "Single family",
+   "price": 2250,
+   "address": "260 Bella Ave",
+   "neighborhood": "Ridgewood",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 108,
+   "rooms": 2,
+   "bedrooms": 1,
+   "bathrooms": 1,
+   "description": "Freshly updated unit with open layout, modern kitchen finishes and generous natural light throughout.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Marta Rossi",
+    "phone": "+1 817 555 0101"
+   },
+   "contact": {
+    "phone": "+1 817 555 1020",
+    "email": "leasing@hallodemo.com"
+   },
+   "coordinates": {
+    "lat": 32.93,
+    "lng": -97.118
+   },
+   "rent_special": true,
+   "price_reduced": false,
+   "builder_promotion": true,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": "2026-10-01",
+   "listed_at": "2026-05-05"
+  },
+  {
+   "id": "TX-1022",
+   "name": "Charming 2-bed apartment in White Chapel",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 1750,
+   "address": "267 Heritage Blvd",
+   "neighborhood": "White Chapel",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 125,
+   "rooms": 3,
+   "bedrooms": 2,
+   "bathrooms": 4,
+   "description": "Well maintained property in a quiet neighborhood, close to parks, schools and everyday shopping.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Lucas Perez",
+    "phone": "+1 817 555 0102"
+   },
+   "contact": {
+    "phone": "+1 817 555 1021"
+   },
+   "coordinates": {
+    "lat": 32.942,
+    "lng": -97.107
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": false,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": "2026-11-15",
+   "listed_at": "2026-06-08"
+  },
+  {
+   "id": "TX-1023",
+   "name": "Updated 3-bed townhome in West 7th",
+   "status": "available",
+   "property_type": "Townhome",
+   "price": 1250,
+   "address": "274 Sunset Ln",
+   "neighborhood": "West 7th",
+   "city": "Fort Worth",
+   "country": "USA",
+   "area_m2": 142,
+   "rooms": 4,
+   "bedrooms": 3,
+   "bathrooms": 3,
+   "description": "Move-in ready space featuring an efficient floor plan, new fixtures and low-maintenance living.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Hallo Realty",
+    "phone": "+1 817 555 0103"
+   },
+   "contact": {
+    "phone": "+1 817 555 1022"
+   },
+   "coordinates": {
+    "lat": 32.765,
+    "lng": -97.34
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-07-11"
+  },
+  {
+   "id": "TX-1024",
+   "name": "Luxury 4-bed condo in Historic Downtown",
+   "status": "available",
+   "property_type": "Condo",
+   "price": 3000,
+   "address": "281 Maple Ct",
+   "neighborhood": "Historic Downtown",
+   "city": "Grapevine",
+   "country": "USA",
+   "area_m2": 159,
+   "rooms": 5,
+   "bedrooms": 4,
+   "bathrooms": 2,
+   "description": "Desirable corner property with premium finishes, ample storage and easy highway access.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Ana Gomez",
+    "phone": "+1 817 555 0104"
+   },
+   "contact": {
+    "phone": "+1 817 555 1023",
+    "whatsapp": "+1 817 555 1023"
+   },
+   "coordinates": {
+    "lat": 32.966,
+    "lng": -97.085
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": false,
+   "furnished": true,
+   "available_from": null,
+   "listed_at": "2026-08-14"
+  },
+  {
+   "id": "TX-1025",
+   "name": "Bright 5-bed apartment in Timberline",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 2500,
+   "address": "288 Main St",
+   "neighborhood": "Timberline",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 176,
+   "rooms": 6,
+   "bedrooms": 5,
+   "bathrooms": 1,
+   "description": "Freshly updated unit with open layout, modern kitchen finishes and generous natural light throughout.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Marta Rossi",
+    "phone": "+1 817 555 0101"
+   },
+   "contact": {
+    "phone": "+1 817 555 1024"
+   },
+   "coordinates": {
+    "lat": 32.978,
+    "lng": -97.14
+   },
+   "rent_special": true,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": true,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-01-17"
+  },
+  {
+   "id": "TX-1026",
+   "name": "Modern 1-bed apartment in Dove Park",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 2000,
+   "address": "295 Oak Dr",
+   "neighborhood": "Dove Park",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 53,
+   "rooms": 2,
+   "bedrooms": 1,
+   "bathrooms": 4,
+   "description": "Well maintained property in a quiet neighborhood, close to parks, schools and everyday shopping.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior living area",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Lucas Perez",
+    "phone": "+1 817 555 0102"
+   },
+   "contact": {
+    "phone": "+1 817 555 1025",
+    "email": "leasing@hallodemo.com"
+   },
+   "coordinates": {
+    "lat": 32.93,
+    "lng": -97.129
+   },
+   "rent_special": false,
+   "price_reduced": true,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": "2026-10-01",
+   "listed_at": "2026-02-20"
+  },
+  {
+   "id": "TX-1027",
+   "name": "Renovated 2-bed townhome in Bransford",
+   "status": "available",
+   "property_type": "Townhome",
+   "price": 1500,
+   "address": "302 Lakeview Ave",
+   "neighborhood": "Bransford",
+   "city": "Colleyville",
+   "country": "USA",
+   "area_m2": 70,
+   "rooms": 3,
+   "bedrooms": 2,
+   "bathrooms": 3,
+   "description": "Move-in ready space featuring an efficient floor plan, new fixtures and low-maintenance living.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior bedroom",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Hallo Realty",
+    "phone": "+1 817 555 0103"
+   },
+   "contact": {
+    "phone": "+1 817 555 1026"
+   },
+   "coordinates": {
+    "lat": 32.942,
+    "lng": -97.118
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-03-23"
+  },
+  {
+   "id": "TX-1028",
+   "name": "Cozy 3-bed condo in Hidden Lakes",
+   "status": "available",
+   "property_type": "Condo",
+   "price": 1000,
+   "address": "309 Cedar Blvd",
+   "neighborhood": "Hidden Lakes",
+   "city": "Keller",
+   "country": "USA",
+   "area_m2": 87,
+   "rooms": 4,
+   "bedrooms": 3,
+   "bathrooms": 2,
+   "description": "Desirable corner property with premium finishes, ample storage and easy highway access.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Ana Gomez",
+    "phone": "+1 817 555 0104"
+   },
+   "contact": {
+    "phone": "+1 817 555 1027",
+    "whatsapp": "+1 817 555 1027"
+   },
+   "coordinates": {
+    "lat": 32.954,
+    "lng": -97.107
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": true,
+   "parking_included": false,
+   "in_unit_laundry": false,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-04-26"
+  },
+  {
+   "id": "TX-1029",
+   "name": "Spacious 4-bed home in Sunset Pointe",
+   "status": "available",
+   "property_type": "Single family",
+   "price": 2750,
+   "address": "316 Bella Ln",
+   "neighborhood": "Sunset Pointe",
+   "city": "Southlake",
+   "country": "USA",
+   "area_m2": 104,
+   "rooms": 5,
+   "bedrooms": 4,
+   "bathrooms": 1,
+   "description": "Freshly updated unit with open layout, modern kitchen finishes and generous natural light throughout.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Marta Rossi",
+    "phone": "+1 817 555 0101"
+   },
+   "contact": {
+    "phone": "+1 817 555 1028"
+   },
+   "coordinates": {
+    "lat": 32.966,
+    "lng": -97.096
+   },
+   "rent_special": true,
+   "price_reduced": false,
+   "builder_promotion": false,
+   "pets_allowed": false,
+   "parking_included": true,
+   "in_unit_laundry": true,
+   "furnished": true,
+   "available_from": "2026-11-15",
+   "listed_at": "2026-05-01"
+  },
+  {
+   "id": "TX-1030",
+   "name": "Charming 5-bed apartment in Solana",
+   "status": "available",
+   "property_type": "Apartment",
+   "price": 2250,
+   "address": "323 Heritage Ct",
+   "neighborhood": "Solana",
+   "city": "Westlake",
+   "country": "USA",
+   "area_m2": 121,
+   "rooms": 6,
+   "bedrooms": 5,
+   "bathrooms": 4,
+   "description": "Well maintained property in a quiet neighborhood, close to parks, schools and everyday shopping.",
+   "images": [
+    {
+     "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": true
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=60",
+     "alt": "Interior kitchen",
+     "is_primary": false
+    },
+    {
+     "url": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=900&q=60",
+     "alt": "Exterior view",
+     "is_primary": false
+    }
+   ],
+   "agent": {
+    "name": "Lucas Perez",
+    "phone": "+1 817 555 0102"
+   },
+   "contact": {
+    "phone": "+1 817 555 1029"
+   },
+   "coordinates": {
+    "lat": 32.978,
+    "lng": -97.085
+   },
+   "rent_special": false,
+   "price_reduced": false,
+   "builder_promotion": true,
+   "pets_allowed": false,
+   "parking_included": false,
+   "in_unit_laundry": true,
+   "furnished": false,
+   "available_from": null,
+   "listed_at": "2026-06-04"
+  }
+ ]
+}
