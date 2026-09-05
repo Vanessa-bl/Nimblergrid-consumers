@@ -347,7 +347,10 @@ function PropertyHeader({
         </span>
       ) : null}
       {title !== "" ? (
-        <h3 className="mt-1.5 line-clamp-2 font-sans text-[20px] font-semibold leading-tight tracking-tight text-zinc-900">
+        <h3
+          title={title}
+          className="mt-1.5 line-clamp-2 font-sans text-[20px] font-semibold leading-tight tracking-tight text-zinc-900"
+        >
           {title}
         </h3>
       ) : null}
