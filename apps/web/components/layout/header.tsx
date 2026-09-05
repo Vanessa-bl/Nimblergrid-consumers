@@ -9,7 +9,7 @@ export async function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-zinc-50/85 backdrop-blur-md">
-      <div className="relative mx-auto flex max-w-[1640px] items-center gap-6 px-4 py-4 sm:px-6 lg:px-7">
+      <div className="relative mx-auto flex h-16 max-w-[1640px] items-center gap-6 px-4 sm:px-6 lg:px-7">
         <LogoWordmark />
 
         <div className="ml-2 hidden md:block">

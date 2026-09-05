@@ -301,7 +301,7 @@ export function SearchResultsLayout() {
 
   return (
     <div>
-      <div className="sticky top-0 z-30 border-b border-zinc-200 bg-white px-4 py-3 shadow-[0_4px_16px_-12px_rgba(24,24,27,0.2)] sm:px-6">
+      <div className="sticky top-16 z-30 border-b border-zinc-200 bg-white px-4 py-3 shadow-[0_4px_16px_-12px_rgba(24,24,27,0.2)] sm:px-6">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
           <div className="min-w-0 flex-1">
             <PropertySearchBar
