@@ -2,13 +2,35 @@
 
 import { useState, type ReactNode } from "react";
 import { Checkbox, CheckboxControl } from "@/components/checkbox";
+import { Avatar } from "@/components/avatar/Avatar";
+import type { AvatarSize, AvatarTone } from "@/components/avatar/Avatar.types";
+import { UserProfileCardExample } from "@/components/UserProfileCard/UserProfileCard.example";
 import { DatePicker } from "@/components/ui/date-picker";
+import { Pagination } from "@/components/Pagination/Pagination";
 import { ViewModeToggle } from "@/components/ui/view-mode-toggle";
 import { PropertyCard } from "@/components/PropertyCard/PropertyCard";
 import {
   DEMO_PROPERTIES,
   PROPERTY_CARD_PROPS,
 } from "@/components/test/property-card-fixtures";
+import {
+  AVATAR_PROPS,
+  USER_PROFILE_CARD_PROPS,
+  USER_PROFILE_CARD_USAGE,
+} from "@/components/test/user-profile-fixtures";
+import { TextField } from "@/components/form/TextField/TextField";
+import { CurrencyInput } from "@/components/form/CurrencyInput/CurrencyInput";
+import { PillSelect } from "@/components/form/PillSelect/PillSelect";
+import { InfoTooltip } from "@/components/form/InfoTooltip/InfoTooltip";
+import {
+  CREDIT_OPTIONS,
+  CURRENCY_INPUT_PROPS,
+  HOUSEHOLD_OPTIONS,
+  INFO_TOOLTIP_PROPS,
+  PETS_OPTIONS,
+  PILL_SELECT_PROPS,
+  TEXT_FIELD_PROPS,
+} from "@/components/test/form-fixtures";
 import { FilterChipButton } from "@/components/filters/FilterChipButton/FilterChipButton";
 import { MoveInByDropdown } from "@/components/filters/MoveInByDropdown/MoveInByDropdown";
 import { PriceRangeDropdown } from "@/components/filters/PriceRangeDropdown/PriceRangeDropdown";
@@ -313,6 +335,7 @@ type ShowcaseSectionProps = {
   description: string;
   props: readonly DocProp[];
   example: ReactNode;
+  usage?: string;
 };
 
 function ShowcaseSection({
@@ -320,17 +343,26 @@ function ShowcaseSection({
   description,
   props,
   example,
+  usage,
 }: Readonly<ShowcaseSectionProps>) {
   return (
-    <section className="grid gap-8 border-t border-zinc-200 py-10 lg:grid-cols-[minmax(0,1fr)_440px]">
+    <section className="grid gap-8 border-t border-zinc-200 py-14 lg:grid-cols-[minmax(0,1fr)_440px]">
       <div className="min-w-0">
-        <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-[28px]">
           {title}
         </h2>
         <p className="mt-2 max-w-[64ch] text-sm leading-relaxed text-zinc-600">
           {description}
         </p>
         <PropsTable props={props} />
+        {usage !== undefined ? (
+          <>
+            <h3 className="mt-8 text-sm font-semibold text-zinc-900">Uso</h3>
+            <pre className="mt-2 overflow-x-auto rounded-xl bg-zinc-900 p-4 font-mono text-[12.5px] leading-relaxed text-zinc-100">
+              {usage}
+            </pre>
+          </>
+        ) : null}
       </div>
       <div className="min-w-0 self-start rounded-2xl border border-zinc-200 bg-zinc-50/70 p-6">
         {example}
@@ -544,6 +576,267 @@ function DateExample() {
   );
 }
 
+const AVATAR_SIZE_DEMOS: readonly { size: AvatarSize; label: string }[] = [
+  { size: "xs", label: "24px" },
+  { size: "sm", label: "32px" },
+  { size: "md", label: "48px" },
+  { size: "lg", label: "72px" },
+  { size: "xl", label: "96px" },
+];
+
+const AVATAR_TONE_DEMOS: readonly { tone: AvatarTone; label: string }[] = [
+  { tone: "rose", label: "rose" },
+  { tone: "dark", label: "dark" },
+  { tone: "light", label: "light" },
+  { tone: "muted", label: "muted" },
+];
+
+function ExampleCaption({ children }: Readonly<{ children: ReactNode }>) {
+  return (
+    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-zinc-400">
+      {children}
+    </p>
+  );
+}
+
+function AvatarExample() {
+  return (
+    <div className="space-y-6">
+      <div>
+        <ExampleCaption>Tamaños</ExampleCaption>
+        <div className="flex flex-wrap items-start gap-4">
+          {AVATAR_SIZE_DEMOS.map(({ size, label }) => (
+            <div key={size} className="flex flex-col items-center gap-1.5">
+              <Avatar name="Iraima Hurtado" size={size} />
+              <span className="text-[11px] text-zinc-500">{label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div>
+        <ExampleCaption>Tonos del fallback</ExampleCaption>
+        <div className="flex flex-wrap items-start gap-4">
+          {AVATAR_TONE_DEMOS.map(({ tone, label }) => (
+            <div key={tone} className="flex flex-col items-center gap-1.5">
+              <Avatar name="Marta Rossi" size="lg" tone={tone} />
+              <span className="font-mono text-[11px] text-zinc-500">{label}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 max-w-[38ch] text-xs leading-relaxed text-zinc-500">
+          Rose es el tono por defecto; light y muted están pensados para
+          superficies blancas (llevan borde sutil).
+        </p>
+      </div>
+      <div>
+        <ExampleCaption>Imagen con error</ExampleCaption>
+        <div className="flex items-center gap-3">
+          <Avatar
+            name="Iraima Hurtado"
+            size="lg"
+            avatarUrl="https://avatars.invalid/hallo-avatar.jpg"
+            alt="Foto de Iraima Hurtado"
+          />
+          <p className="text-xs leading-relaxed text-zinc-500">
+            La URL no existe: al fallar la carga el avatar pasa solo a las
+            iniciales del nombre.
+          </p>
+        </div>
+      </div>
+      <div>
+        <ExampleCaption>Sin nombre</ExampleCaption>
+        <div className="flex items-center gap-3">
+          <Avatar size="lg" tone="muted" />
+          <p className="text-xs leading-relaxed text-zinc-500">
+            Sin nombre ni imagen se muestra una silueta neutral marcada como
+            decorativa.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TextFieldExample() {
+  const [name, setName] = useState("");
+  const [touched, setTouched] = useState(false);
+  const error =
+    touched && name.trim() === "" ? "Ingresá tu nombre para continuar." : undefined;
+
+  return (
+    <div className="space-y-5">
+      <TextField
+        label="Nombre completo"
+        required
+        value={name}
+        placeholder="Iraima Hurtado"
+        helper={error === undefined ? "Como figura en tu documento." : undefined}
+        error={error}
+        onChange={(event) => setName(event.target.value)}
+        onBlur={() => setTouched(true)}
+      />
+      <div className="space-y-4 border-t border-zinc-200 pt-4">
+        <TextField
+          label="Email"
+          readOnly
+          value="iraima@hallo.one"
+          helper="No editable: se usa para iniciar sesión."
+        />
+        <TextField
+          label="Código postal"
+          disabled
+          value=""
+          placeholder="Campo deshabilitado"
+        />
+      </div>
+    </div>
+  );
+}
+
+function CurrencyExample() {
+  const [digits, setDigits] = useState("");
+  return (
+    <div className="space-y-3">
+      <CurrencyInput
+        label="Estimated household income"
+        required
+        value={digits}
+        onValueChange={setDigits}
+        suffix="/year"
+        placeholder="90000"
+        helper="Escribí solo números: los separadores se agregan solos."
+      />
+      <p className="min-h-5 text-sm text-zinc-500">
+        Valor plano: {digits === "" ? "—" : digits}
+      </p>
+    </div>
+  );
+}
+
+function PillSelectExample() {
+  const [household, setHousehold] = useState<string | null>("2");
+  const [pets, setPets] = useState<string | null>(null);
+  const [credit, setCredit] = useState<string | null>(null);
+
+  return (
+    <div className="space-y-5">
+      <PillSelect
+        label="Total people in household"
+        required
+        options={HOUSEHOLD_OPTIONS}
+        value={household}
+        onChange={setHousehold}
+        helper="Incluí a todas las personas que van a vivir ahí."
+      />
+      <PillSelect
+        label="Pets"
+        options={PETS_OPTIONS}
+        value={pets}
+        onChange={setPets}
+      />
+      <PillSelect
+        label="Your credit score"
+        options={CREDIT_OPTIONS}
+        value={credit}
+        onChange={setCredit}
+      />
+      <p className="min-h-5 border-t border-zinc-200 pt-3 text-sm text-zinc-500">
+        Household: {household ?? "—"} · Pets: {pets ?? "—"} · Credit:{" "}
+        {credit ?? "—"}
+      </p>
+    </div>
+  );
+}
+
+const PAGINATION_PROPS: readonly DocProp[] = [
+  {
+    name: "page",
+    required: true,
+    description: "Página actual (1-based). Controlada por el padre.",
+  },
+  {
+    name: "pageCount",
+    required: true,
+    description:
+      "Total de páginas. Con 1 o menos el paginador no se renderiza.",
+  },
+  {
+    name: "onPageChange",
+    required: true,
+    description:
+      "Se dispara al elegir una página (número, anterior o siguiente) con la página nueva.",
+  },
+  {
+    name: "siblingCount?",
+    description:
+      "Páginas visibles alrededor de la actual (default 1). Se muestran elipsis cuando hay saltos.",
+  },
+  {
+    name: "boundaryCount?",
+    description: "Páginas fijas al inicio y al final (default 1).",
+  },
+  {
+    name: "disabled?",
+    description: "Deshabilita todo el control.",
+  },
+  {
+    name: "ariaLabel?",
+    description: "Label accesible del nav (default 'Paginación').",
+  },
+  {
+    name: "previousLabel? / nextLabel?",
+    description:
+      "aria-label de los botones de página anterior / siguiente (con chevrons).",
+  },
+  {
+    name: "className?",
+    description: "Clases extra para el contenedor nav.",
+  },
+];
+
+function PaginationExample() {
+  const [page, setPage] = useState(1);
+  return (
+    <div className="space-y-4">
+      <Pagination page={page} pageCount={12} onPageChange={setPage} />
+      <p className="text-center text-sm text-zinc-500">
+        Página actual: {page} de 12
+      </p>
+    </div>
+  );
+}
+
+function InfoTooltipExample() {
+  return (
+    <div className="space-y-5">
+      <div className="flex items-center gap-2">
+        <span className="text-sm font-medium text-zinc-900">
+          Total people in household
+        </span>
+        <InfoTooltip content="Sumá todas las personas que van a vivir en la propiedad, incluidos menores." />
+      </div>
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-sm font-medium text-zinc-900">
+          Estimated household income
+        </span>
+        <InfoTooltip
+          placement="left"
+          content="Ingreso anual bruto combinado del hogar, antes de impuestos."
+        />
+      </div>
+      <div className="flex items-center gap-2">
+        <span className="text-sm font-medium text-zinc-900">
+          Your credit score
+        </span>
+        <InfoTooltip content="Rango de tu score crediticio según el último reporte." />
+      </div>
+      <p className="text-xs text-zinc-400">
+        El tooltip abre con click y cierra con Escape o click afuera.
+      </p>
+    </div>
+  );
+}
+
 export function ComponentShowcase() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 py-14 sm:px-6">
@@ -564,7 +857,7 @@ export function ComponentShowcase() {
           <PropertyCardExample />
         </div>
         <div className="mt-8 max-w-[720px]">
-          <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
+          <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-[28px]">
             PropertyCard
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-zinc-600">
@@ -643,6 +936,56 @@ export function ComponentShowcase() {
         description="Input de fecha nativo estilizado, controlado por el padre con formato ISO. Usado dentro de MoveInByDropdown."
         props={DATE_PROPS}
         example={<DateExample />}
+      />
+
+      <ShowcaseSection
+        title="Avatar"
+        description="Avatar circular reutilizable de la familia atómica components/avatar. Con avatarUrl renderiza la imagen (img plano, apto para URLs remotas) y ante cualquier error de carga cae a las iniciales del nombre; sin nombre muestra una silueta. Cada tamaño (xs–xl) y tono (rose, dark, light, muted) es una clase estática precomputada."
+        props={AVATAR_PROPS}
+        example={<AvatarExample />}
+      />
+
+      <ShowcaseSection
+        title="UserProfileCard"
+        description="Card de perfil Tus datos compuesta con el Avatar del proyecto. Prop-driven y sin props obligatorias: con data muestra nombre y filas de contacto no vacías, con isLoading el skeleton (aria-busy) y con data null el estado vacío informativo. El botón Editar datos solo existe si llega onEdit y recibe el objeto completo. Los adapters puros Supabase y Magento viven en UserProfileCard.types."
+        props={USER_PROFILE_CARD_PROPS}
+        example={<UserProfileCardExample />}
+        usage={USER_PROFILE_CARD_USAGE}
+      />
+
+      <ShowcaseSection
+        title="TextField"
+        description="Input de texto de la familia form: label con asterisco para campos obligatorios, helper, error (aria-invalid + borde rose), adornos laterales, disabled y readOnly con estilo propio (enfocable pero sin edición). Todas las props nativas del input se propagan."
+        props={TEXT_FIELD_PROPS}
+        example={<TextFieldExample />}
+      />
+
+      <ShowcaseSection
+        title="CurrencyInput"
+        description="Campo de montos construido sobre TextField. El valor SIEMPRE son dígitos planos ('90000') y el display se formatea solo con separador de miles ('90,000'); el prefijo '$' y el sufijo '/year' llegan por props. Ideal para 'Estimated household income'."
+        props={CURRENCY_INPUT_PROPS}
+        example={<CurrencyExample />}
+      />
+
+      <ShowcaseSection
+        title="PillSelect"
+        description="Selector de píldoras single-select con semántica de radios reales: role radiogroup, navegación por flechas, un solo tab stop y aria-labelledby desde el título. La opción activa usa el patrón oscuro zinc-900 del proyecto. Sirve para household, pets, credit score, lease duration, bedrooms y parking."
+        props={PILL_SELECT_PROPS}
+        example={<PillSelectExample />}
+      />
+
+      <ShowcaseSection
+        title="InfoTooltip"
+        description="Icono '?' con panel de ayuda: abre con click (aria-expanded), cierra con Escape o click afuera y el contenido tiene role tooltip. Pensado para explicar campos como household income o credit score."
+        props={INFO_TOOLTIP_PROPS}
+        example={<InfoTooltipExample />}
+      />
+
+      <ShowcaseSection
+        title="Pagination"
+        description="Paginador de la familia atómica del proyecto: botones pill con la página actual en zinc-900, elipsis automáticas cuando hay saltos (sibling/boundary), y chevrons con aria-label. No se renderiza con una sola página. Se usa en test-list y en el tab Contactados de test-profile."
+        props={PAGINATION_PROPS}
+        example={<PaginationExample />}
       />
     </div>
   );
