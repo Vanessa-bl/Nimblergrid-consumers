@@ -1,0 +1,12 @@
+# Supabase CLI local state — never commit
+.branches/
+.temp/
+snippets/
+
+# Migrations son build artifacts (SQL canonico vive en services/*/sql/)
+migrations/
+
+# Env files locales
+.env
+.env.local
+.env.*.local
