@@ -3,10 +3,9 @@
 .temp/
 snippets/
 
-# Migrations son build artifacts (SQL canonico vive en services/*/sql/)
-migrations/
-
 # Env files locales
 .env
 .env.local
 .env.*.local
+
+# Nota: supabase/migrations/ SI se versiona (source of truth para el CI).
