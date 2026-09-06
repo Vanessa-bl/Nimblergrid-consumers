@@ -12,6 +12,7 @@ import { PhoneIcon } from "@/components/ui/icons/phone";
 import { WhatsAppIcon } from "@/components/ui/icons/whatsapp";
 import type {
   PropertyCardProps,
+  PropertyContactStatus,
   PropertyFeatures,
   PropertyImage,
   PropertyLocation,
@@ -21,6 +22,13 @@ import type {
 const numberFormatter = new Intl.NumberFormat("es-AR");
 const focusVisibleClasses =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500";
+
+const CONTACT_STATUS_LABELS: Record<PropertyContactStatus, string> = {
+  contactado: "Contactado",
+  leido: "Leído",
+  "en-proceso": "En proceso",
+  completado: "Completado",
+};
 
 function formatNumber(value: number): string {
   return numberFormatter.format(value);
@@ -339,7 +347,10 @@ function PropertyHeader({
         </span>
       ) : null}
       {title !== "" ? (
-        <h3 className="mt-1.5 line-clamp-2 font-sans text-[20px] font-semibold leading-tight tracking-tight text-zinc-900">
+        <h3
+          title={title}
+          className="mt-1.5 line-clamp-2 font-sans text-[20px] font-semibold leading-tight tracking-tight text-zinc-900"
+        >
           {title}
         </h3>
       ) : null}
@@ -539,6 +550,7 @@ export const PropertyCard = memo(function PropertyCard(
     selected = false,
     onSelectionChange,
     stacked = false,
+    contactStatus,
   } = props;
 
   const selectionEnabled = onSelectionChange !== undefined;
@@ -575,7 +587,7 @@ export const PropertyCard = memo(function PropertyCard(
         onFavoriteToggle={onFavoriteToggle}
         onSelectionChange={onSelectionChange}
       />
-      <div className="flex min-w-0 flex-col p-5 md:p-6">
+      <div className="flex min-w-0 flex-1 flex-col p-5 md:p-6">
         <PropertyHeader
           propertyType={propertyType}
           title={title}
@@ -596,6 +608,13 @@ export const PropertyCard = memo(function PropertyCard(
           onContact={onContact}
         />
       </div>
+      {contactStatus !== undefined ? (
+        <div className="flex items-center justify-center gap-2 bg-zinc-900 px-4 py-2.5 md:col-span-2">
+          <span className="text-[13px] font-semibold tracking-wide text-white">
+            {CONTACT_STATUS_LABELS[contactStatus]}
+          </span>
+        </div>
+      ) : null}
     </article>
   );
 });

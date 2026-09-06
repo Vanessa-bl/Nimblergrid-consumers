@@ -4,6 +4,7 @@ import { useCallback, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDownIcon } from "@/components/ui/icons/chevron-down";
 import { MapView } from "@/components/MapView/MapView";
+import { Pagination } from "@/components/Pagination/Pagination";
 import { FiltersSidebar } from "@/components/filters/FiltersSidebar/FiltersSidebar";
 import { FiltersSidebarButton } from "@/components/filters/FiltersSidebar/FiltersSidebar";
 import type { FiltersSidebarState } from "@/components/filters/FiltersSidebar/FiltersSidebar.types";
@@ -25,6 +26,8 @@ import {
 const SLIDER_MIN = 500;
 const SLIDER_MAX = 3000;
 const SLIDER_STEP = 250;
+
+const PAGE_SIZE = 8;
 
 type SortOption = "relevance" | "price-asc" | "price-desc" | "newest";
 
@@ -169,6 +172,7 @@ export function SearchResultsLayout() {
   const distribution = useMemo(() => buildPriceDistribution(allItems), [allItems]);
 
   const [query, setQuery] = useState("");
+  const [page, setPage] = useState(1);
   const [price, setPrice] = useState<PriceRangeFilter>({
     min: null,
     max: null,
@@ -213,6 +217,13 @@ export function SearchResultsLayout() {
       return { ...base, actions: { isFavorite: favorite } };
     });
   }, [visibleItems, propertiesById, favoriteIds]);
+
+  const pageCount = Math.max(1, Math.ceil(favoriteCards.length / PAGE_SIZE));
+  const currentPage = Math.min(page, pageCount);
+  const paginatedCards = favoriteCards.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE,
+  );
 
   const handleFavoriteToggle = useCallback((propertyId: string) => {
     setFavoriteIds((previous) => {
@@ -276,6 +287,7 @@ export function SearchResultsLayout() {
       furnished: filters.furnished,
       keyword: filters.keyword,
     });
+    setPage(1);
   };
 
   const handleSidebarClearAll = () => {
@@ -284,16 +296,20 @@ export function SearchResultsLayout() {
     setTypes([]);
     setAdvanced(EMPTY_ADVANCED);
     setMoveInDate(null);
+    setPage(1);
   };
 
   return (
     <div>
-      <div className="sticky top-0 z-30 border-b border-zinc-200 bg-white px-4 py-3 shadow-[0_4px_16px_-12px_rgba(24,24,27,0.2)] sm:px-6">
+      <div className="sticky top-16 z-30 border-b border-zinc-200 bg-white px-4 py-3 shadow-[0_4px_16px_-12px_rgba(24,24,27,0.2)] sm:px-6">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
           <div className="min-w-0 flex-1">
             <PropertySearchBar
               value={query}
-              onValueChange={setQuery}
+              onValueChange={(value) => {
+                setQuery(value);
+                setPage(1);
+              }}
               onSearchSubmit={() => undefined}
             />
           </div>
@@ -311,45 +327,48 @@ export function SearchResultsLayout() {
               onlySpecials={price.specials}
               totalResults={visibleCount}
               distribution={distribution}
-              onApply={setPrice}
-              onClear={() =>
-                setPrice({ min: null, max: null, specials: false })
-              }
+              onApply={(value) => {
+                setPrice(value);
+                setPage(1);
+              }}
+              onClear={() => {
+                setPrice({ min: null, max: null, specials: false });
+                setPage(1);
+              }}
             />
             <RoomsFilterDropdown
               label="Rooms"
               selectedBedrooms={rooms.bedrooms}
               selectedBathrooms={rooms.bathrooms}
-              onChange={setRooms}
+              onChange={(value) => {
+                setRooms(value);
+                setPage(1);
+              }}
               onDone={() => undefined}
             />
             <PropertyTypeDropdown
               label="Property type"
               selectedTypes={types}
               totalResults={visibleCount}
-              onApply={setTypes}
-              onClear={() => setTypes([])}
+              onApply={(value) => {
+                setTypes(value);
+                setPage(1);
+              }}
+              onClear={() => {
+                setTypes([]);
+                setPage(1);
+              }}
             />
             <MoveInByDropdown
               label="Move-in by"
               selectedDate={moveInDate}
-              onDateChange={setMoveInDate}
+              onDateChange={(value) => {
+                setMoveInDate(value);
+                setPage(1);
+              }}
               onDone={() => undefined}
             />
           </div>
-        </div>
-
-        <div className="mt-3 flex items-center justify-end">
-          <ViewModeToggle
-            ariaLabel="Results view mode"
-            className="w-full max-w-[170px]"
-            options={[
-              { label: "List", value: "list" },
-              { label: "Map", value: "map" },
-            ]}
-            value={viewMode}
-            onChange={setViewMode}
-          />
         </div>
       </div>
 
@@ -382,43 +401,70 @@ export function SearchResultsLayout() {
                   </div>
                 ) : null}
               </div>
-              <label className="relative block">
-                <span className="sr-only">Sort by</span>
-                <select
-                  aria-label="Sort by"
-                  value={sort}
-                  onChange={(event) => setSort(event.target.value as SortOption)}
-                  className="h-10 cursor-pointer appearance-none rounded-full border border-zinc-200 bg-white pl-4 pr-9 text-sm font-medium text-zinc-800 outline-none transition-colors hover:border-zinc-400 focus:border-zinc-900"
-                >
-                  {SORT_OPTIONS.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-                <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
-              </label>
+              <div className="flex flex-wrap items-center gap-3">
+                <label className="relative block">
+                  <span className="sr-only">Sort by</span>
+                  <select
+                    aria-label="Sort by"
+                    value={sort}
+                    onChange={(event) => {
+                      setSort(event.target.value as SortOption);
+                      setPage(1);
+                    }}
+                    className="h-10 cursor-pointer appearance-none rounded-full border border-zinc-200 bg-white pl-4 pr-9 text-sm font-medium text-zinc-800 outline-none transition-colors hover:border-zinc-400 focus:border-zinc-900"
+                  >
+                    {SORT_OPTIONS.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+                </label>
+                <div className="w-[170px] shrink-0">
+                  <ViewModeToggle
+                    ariaLabel="Results view mode"
+                    options={[
+                      { label: "List", value: "list" },
+                      { label: "Map", value: "map" },
+                    ]}
+                    value={viewMode}
+                    onChange={setViewMode}
+                  />
+                </div>
+              </div>
             </div>
 
             {visibleCount > 0 ? (
-              <div
-                className={
-                  showMap
-                    ? "grid grid-cols-1 gap-5"
-                    : "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-                }
-              >
-                {favoriteCards.map((property) => (
-                  <PropertyCard
-                    key={property.id}
-                    property={property}
-                    stacked={!showMap}
-                    selected={selectedIds.has(property.id)}
-                    onFavoriteToggle={handleFavoriteToggle}
-                    onSelectionChange={handleSelectionChange}
-                  />
-                ))}
-              </div>
+              <>
+                <div
+                  className={
+                    showMap
+                      ? "grid grid-cols-1 gap-5"
+                      : "grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                  }
+                >
+                  {paginatedCards.map((property) => (
+                    <PropertyCard
+                      key={property.id}
+                      property={property}
+                      stacked={!showMap}
+                      selected={selectedIds.has(property.id)}
+                      onFavoriteToggle={handleFavoriteToggle}
+                      onSelectionChange={handleSelectionChange}
+                    />
+                  ))}
+                </div>
+                {pageCount > 1 ? (
+                  <div className="mt-10 flex justify-center">
+                    <Pagination
+                      page={currentPage}
+                      pageCount={pageCount}
+                      onPageChange={setPage}
+                    />
+                  </div>
+                ) : null}
+              </>
             ) : (
               <p className="rounded-2xl border border-dashed border-zinc-300 p-10 text-center text-sm text-zinc-500">
                 No homes match the current filters.

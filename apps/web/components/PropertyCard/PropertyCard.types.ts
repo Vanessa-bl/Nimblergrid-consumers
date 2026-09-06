@@ -45,6 +45,8 @@ export type PropertyActions = {
   isFavorite: boolean;
 };
 
+export type PropertyContactStatus = "contactado" | "leido" | "en-proceso" | "completado";
+
 export type Property = {
   id: string;
   status: PropertyStatus;
@@ -70,4 +72,5 @@ export type PropertyCardProps = {
   selected?: boolean;
   onSelectionChange?: (propertyId: string, selected: boolean) => void;
   stacked?: boolean;
+  contactStatus?: PropertyContactStatus;
 };
