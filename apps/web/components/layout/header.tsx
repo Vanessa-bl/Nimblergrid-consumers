@@ -24,7 +24,9 @@ export async function Header() {
           >
             Login
           </Button>
-          <Button href="/signup">Sign up</Button>
+          <Button href="/signup" external>
+            Sign up
+          </Button>
           <HeaderMobileMenu links={links} />
         </div>
       </div>

@@ -1,5 +1,5 @@
 import Link, { type LinkProps } from "next/link";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
 type Variant = "primary" | "dark" | "outline-dark" | "outline-light";
 type Size = "md" | "lg";
@@ -28,12 +28,27 @@ type CommonProps = {
   children: ReactNode;
 };
 
-type LinkVariant = Omit<LinkProps, "className"> & { href: LinkProps["href"] };
-type ButtonVariant = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className"> & {
-  href?: undefined;
+/**
+ * `external`: renderea <a> plano en vez de <Link> de next/link.
+ * Uso: rutas que redirigen cross-origin (auth, downloads) — evita el prefetch
+ * de Next que revienta con "Failed to fetch" sobre redirects a otros dominios.
+ */
+type LinkVariant = Omit<LinkProps, "className"> & {
+  href: LinkProps["href"];
+  external?: false;
 };
 
-export type ButtonProps = CommonProps & (LinkVariant | ButtonVariant);
+type ExternalAnchorVariant = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "className" | "href"> & {
+  href: string;
+  external: true;
+};
+
+type ButtonVariant = Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className"> & {
+  href?: undefined;
+  external?: undefined;
+};
+
+export type ButtonProps = CommonProps & (LinkVariant | ExternalAnchorVariant | ButtonVariant);
 
 export const Button = ({
   variant = "primary",
@@ -47,6 +62,14 @@ export const Button = ({
     .join(" ");
 
   if ("href" in rest && rest.href !== undefined) {
+    if ("external" in rest && rest.external) {
+      const { external: _external, ...anchorRest } = rest;
+      return (
+        <a className={cls} {...(anchorRest as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+          {children}
+        </a>
+      );
+    }
     return (
       <Link className={cls} {...(rest as LinkVariant)}>
         {children}
