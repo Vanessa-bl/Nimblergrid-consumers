@@ -11,7 +11,7 @@ type SearchInputProps = {
 export const SearchInput = ({
   action = "/search",
   name = "q",
-  placeholder = "Ubicación, ciudad o zona",
+  placeholder = "Lorem ipsum dolor sit",
   ariaLabel = "Search",
   className = "",
 }: SearchInputProps) => (
@@ -38,7 +38,7 @@ export const SearchInput = ({
       type="submit"
       className="my-1.5 mr-1.5 inline-flex h-12 flex-none items-center gap-2 rounded-full bg-zinc-900 px-5 text-[15.5px] font-semibold tracking-[0.02em] text-white transition-all hover:brightness-110"
     >
-      Search
+      Lorem
       <SearchIcon width={18} height={18} />
     </button>
   </form>

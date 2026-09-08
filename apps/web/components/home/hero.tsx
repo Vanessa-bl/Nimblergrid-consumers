@@ -5,9 +5,9 @@ import { PrismicImage } from "@/components/ui/prismic-image";
 import { SearchBar } from "@/components/ui/search-bar";
 
 const SEARCH_MODES = [
-  { key: "buy", label: "Buy", action: "/buy" },
-  { key: "rent", label: "Rent", action: "/rent" },
-  { key: "sell", label: "Sell", action: "/sell" },
+  { key: "buy", label: "Lorem", action: "/buy" },
+  { key: "rent", label: "Ipsum", action: "/rent" },
+  { key: "sell", label: "Dolor", action: "/sell" },
 ] as const;
 
 const titleComponents: JSXMapSerializer = {
