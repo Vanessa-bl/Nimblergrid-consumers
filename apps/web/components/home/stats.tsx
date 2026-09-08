@@ -1,7 +1,7 @@
 const STATS = [
-  { value: "9.600+", label: "Estudios verificados" },
-  { value: "202.000+", label: "Fotos de proyectos reales" },
-  { value: "1.200+", label: "Marcas y fabricantes" },
+  { value: "9.600+", label: "Lorem ipsum" },
+  { value: "202.000+", label: "Lorem ipsum dolor sit" },
+  { value: "1.200+", label: "Lorem ipsum dolor" },
 ] as const;
 
 export function Stats() {

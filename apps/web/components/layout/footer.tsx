@@ -7,31 +7,31 @@ import { PinterestIcon } from "@/components/ui/icons/pinterest";
 
 const COLUMNS = [
   {
-    title: "Inspiración",
+    title: "Lorem",
     links: [
-      { href: "/productos", label: "Productos" },
-      { href: "/fabricantes", label: "Marcas" },
-      { href: "/discover/photos", label: "Fotos" },
-      { href: "/profesionales", label: "Profesionales" },
-      { href: "/magazine", label: "Magazine" },
+      { href: "/productos", label: "Ipsum" },
+      { href: "/fabricantes", label: "Dolor" },
+      { href: "/discover/photos", label: "Sit" },
+      { href: "/profesionales", label: "Amet" },
+      { href: "/magazine", label: "Consectetur" },
     ],
   },
   {
-    title: "Consultas",
+    title: "Adipiscing",
     links: [
-      { href: "/signup/pro", label: "Unirme gratis como profesional" },
-      { href: "/signup", label: "Unirme como aficionado" },
-      { href: "/insignia", label: "Insignia para tu web" },
-      { href: "/login", label: "Inicia sesión" },
-      { href: "/contact", label: "Contacto" },
+      { href: "/signup/pro", label: "Sed do eiusmod tempor" },
+      { href: "/signup", label: "Incididunt ut labore" },
+      { href: "/insignia", label: "Et dolore magna aliqua" },
+      { href: "/login", label: "Commodo consequat" },
+      { href: "/contact", label: "Dolore" },
     ],
   },
   {
-    title: "Legales",
+    title: "Laborum",
     links: [
-      { href: "/legal/terms-pro", label: "Términos y condiciones PRO+" },
-      { href: "/legal/privacy", label: "Política de Privacidad" },
-      { href: "/legal/terms", label: "Términos y Condiciones" },
+      { href: "/legal/terms-pro", label: "Enim ad minim veniam" },
+      { href: "/legal/privacy", label: "Ullamco laboris nisi" },
+      { href: "/legal/terms", label: "Duis aute irure" },
     ],
   },
 ] as const;
@@ -58,7 +58,7 @@ export function Footer() {
           <div>
             <LogoWordmark />
             <p className="mt-4 max-w-xs text-[14.5px] leading-relaxed text-zinc-600">
-              Inspirate. Encontrá profesionales. Conocé marcas y productos para diseñar tu hogar.
+              Lorem. Ipsum dolor. Sit amet consectetur adipiscing elit sed do eiusmod.
             </p>
             <ul className="mt-6 flex gap-3">
               {SOCIALS.map(({ href, label, Icon }) => (
@@ -102,8 +102,8 @@ export function Footer() {
 
         <div className="border-t border-zinc-200">
           <div className="mx-auto flex max-w-[1640px] flex-col gap-2 px-4 py-6 text-[13px] text-zinc-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-7">
-            <span>© {year} · Buenos Aires, Argentina</span>
-            <span>Una nueva experiencia para diseñar tu hogar</span>
+            <span>© {year} · Lorem ipsum dolor</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipiscing</span>
           </div>
         </div>
       </div>
