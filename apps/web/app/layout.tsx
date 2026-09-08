@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
+import { headers } from "next/headers"; // 1. Importa headers
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -16,9 +17,15 @@ export const metadata: Metadata = {
     "Miles de proyectos reales, estudios verificados y productos para diseñar tu hogar.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const headersList = await headers();
+  const nonce = headersList.get("x-nonce") || undefined;
+
   return (
     <html lang="es" className={`${archivo.variable} h-full antialiased`}>
+      <head>
+        <script nonce={nonce} />
+      </head>
       <body className="flex min-h-full flex-col bg-zinc-50 font-sans text-zinc-900">
         <Header />
         <main className="flex-1">{children}</main>
