@@ -6,27 +6,27 @@ import { ImagePlaceholderIcon } from "@/components/ui/icons/image-placeholder";
 const FEATURES = [
   {
     href: "/discover/photos",
-    eyebrow: "Inspiración",
-    title: "Inspirate con miles de fotos reales",
+    eyebrow: "Lorem",
+    title: "Lorem ipsum dolor sit amet consectetur",
     description:
-      "Recorré ambientes, materiales y estilos de los mejores estudios. Guardá tus favoritas en ideabooks.",
-    cta: "Ver fotos",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed. Do eiusmod tempor incididunt ut.",
+    cta: "Lorem ipsum",
   },
   {
     href: "/profesionales",
-    eyebrow: "Profesionales",
-    title: "Encontrá el estudio ideal",
+    eyebrow: "Lorem",
+    title: "Lorem ipsum dolor sit",
     description:
-      "Filtrá por zona, especialidad o estilo. Mirá su portfolio antes de contactarlos.",
-    cta: "Ver profesionales",
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing elit sed do eiusmod tempor.",
+    cta: "Lorem ipsum",
   },
   {
     href: "/productos",
-    eyebrow: "Productos",
-    title: "Descubrí productos verificados",
+    eyebrow: "Lorem",
+    title: "Lorem ipsum dolor",
     description:
-      "Catálogo de fabricantes y marcas con precios y disponibilidad. Pedí cotización en un clic.",
-    cta: "Ver productos",
+      "Lorem ipsum dolor sit amet consectetur adipiscing. Elit sed do eiusmod tempor.",
+    cta: "Lorem ipsum",
   },
 ] as const;
 
@@ -34,12 +34,12 @@ export function Features() {
   return (
     <section className="mx-auto max-w-[1640px] px-4 py-16 sm:px-6 lg:px-7 lg:py-20">
       <header className="mx-auto mb-11 max-w-[680px] text-center">
-        <Eyebrow>Todo en un mismo lugar</Eyebrow>
+        <Eyebrow>Lorem ipsum dolor sit amet</Eyebrow>
         <h2 className="mt-3 font-sans text-3xl font-semibold leading-[1.1] tracking-tight text-zinc-900 sm:text-4xl lg:text-[42px]">
-          De la inspiración a la obra terminada
+          Lorem ipsum dolor sit amet consectetur adipiscing
         </h2>
         <p className="mx-auto mt-3.5 max-w-[56ch] text-base leading-relaxed text-zinc-600">
-          Tres herramientas que se combinan para que cada proyecto se haga realidad con menos fricción.
+          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.
         </p>
       </header>
 
