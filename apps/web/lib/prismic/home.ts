@@ -6,7 +6,10 @@ const HOME_CACHE_TTL_SECONDS = 3600;
 
 const fetchHome = async () => {
   const client = createClient();
-  return client.getSingle("home").catch(() => null);
+  return client.getSingle("home").catch((err) => {
+    console.error("[getHome] Prismic error:", err?.message ?? err);
+    return null;
+  });
 };
 
 export const getHome = withCache(fetchHome, ["home"], {
