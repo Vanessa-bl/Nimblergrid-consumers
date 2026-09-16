@@ -1,14 +1,13 @@
-import { withAuth } from "@workos-inc/authkit-nextjs";
+import { auth0 } from "@/lib/auth0";
+import { redirect } from "next/navigation";
 
-/**
- * DIAGNOSTICO: muestra el user actual (o null si no hay sesion).
- * Uso temporal para debuggear el flow de auth.
- * Borrar cuando armemos la UI real de perfil.
- */
 export const dynamic = "force-dynamic";
 
 export default async function MePage() {
-  const auth = await withAuth();
+  const session = await auth0.getSession();
+  if (!session) redirect("/auth/login?returnTo=/me");
+
+  const { user } = session;
 
   return (
     <div style={{ padding: "2rem", fontFamily: "monospace", fontSize: "13px" }}>
@@ -16,35 +15,22 @@ export default async function MePage() {
         Session diagnostic
       </h1>
 
-      {auth.user ? (
-        <>
-          <p style={{ color: "green", marginBottom: "1rem" }}>Logged in.</p>
-          <pre
-            style={{
-              background: "#f4f4f5",
-              padding: "1rem",
-              borderRadius: "8px",
-              overflow: "auto",
-            }}
-          >
-            {JSON.stringify(auth, null, 2)}
-          </pre>
-          <p style={{ marginTop: "1rem" }}>
-            <a href="/signout" style={{ color: "#7c3aed", textDecoration: "underline" }}>
-              Sign out
-            </a>
-          </p>
-        </>
-      ) : (
-        <>
-          <p style={{ color: "red", marginBottom: "1rem" }}>No session.</p>
-          <p>
-            <a href="/signin" style={{ color: "#7c3aed", textDecoration: "underline" }}>
-              Sign in
-            </a>
-          </p>
-        </>
-      )}
+      <p style={{ color: "green", marginBottom: "1rem" }}>Logged in.</p>
+      <pre
+        style={{
+          background: "#f4f4f5",
+          padding: "1rem",
+          borderRadius: "8px",
+          overflow: "auto",
+        }}
+      >
+        {JSON.stringify(user, null, 2)}
+      </pre>
+      <p style={{ marginTop: "1rem" }}>
+        <a href="/signout" style={{ color: "#7c3aed", textDecoration: "underline" }}>
+          Sign out
+        </a>
+      </p>
     </div>
   );
 }
