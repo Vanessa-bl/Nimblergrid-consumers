@@ -1,5 +1,5 @@
 import type { DocProp } from "@/components/test/props-table";
-import type { PillOption } from "@/components/form/PillSelect/PillSelect.types";
+import type { PillOption } from "@/components/ui/form/PillSelect/PillSelect.types";
 
 export const TEXT_FIELD_PROPS: readonly DocProp[] = [
   {
@@ -14,11 +14,11 @@ export const TEXT_FIELD_PROPS: readonly DocProp[] = [
   {
     name: "error?",
     description:
-      "Mensaje de error: borde rose-500, texto rose-600 y aria-invalid. Si hay helper, lo reemplaza.",
+      "Mensaje de error: borde brand-500, texto brand-600 y aria-invalid. Si hay helper, lo reemplaza.",
   },
   {
     name: "helper?",
-    description: "Texto de ayuda debajo del campo en zinc-500.",
+    description: "Texto de ayuda debajo del campo en neutral-500.",
   },
   {
     name: "startAdornment?",
@@ -36,7 +36,7 @@ export const TEXT_FIELD_PROPS: readonly DocProp[] = [
   {
     name: "…props de input nativo",
     description:
-      "value, onChange, placeholder, disabled, readOnly, id, name, aria-* y demás InputHTMLAttributes se propagan al input. El estilo readOnly es propio (bg-zinc-50, texto zinc-600, sigue siendo enfocable).",
+      "value, onChange, placeholder, disabled, readOnly, id, name, aria-* y demás InputHTMLAttributes se propagan al input. El estilo readOnly es propio (bg-neutral-50, texto neutral-600, sigue siendo enfocable).",
   },
 ];
 
@@ -66,7 +66,7 @@ export const CURRENCY_INPUT_PROPS: readonly DocProp[] = [
   },
   {
     name: "error? / helper?",
-    description: "Mismos contratos que TextField (borde rose-500 y aria-invalid).",
+    description: "Mismos contratos que TextField (borde brand-500 y aria-invalid).",
   },
   {
     name: "disabled? / readOnly?",

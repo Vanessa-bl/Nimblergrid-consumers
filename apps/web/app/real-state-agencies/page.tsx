@@ -1,7 +1,1 @@
-export default function RealStateAgenciesPage() {
-  return (
-    <div className="flex min-h-[50vh] items-center justify-center">
-      <h1 className="text-xl font-medium text-zinc-600">Próximamente...</h1>
-    </div>
-  );
-}
+export { RealStateAgenciesScreen as default } from "@/screens/real-state-agencies/RealStateAgenciesScreen";

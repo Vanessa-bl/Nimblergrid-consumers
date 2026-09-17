@@ -45,8 +45,8 @@ export const SearchBar = ({
               onClick={() => setActiveKey(mode.key)}
               className={
                 selected
-                  ? "rounded-full bg-zinc-900 px-5 py-2 text-sm font-semibold text-white transition-colors"
-                  : "rounded-full bg-white px-5 py-2 text-sm font-semibold text-zinc-700 ring-1 ring-zinc-200 transition-colors hover:bg-zinc-100"
+                  ? "rounded-full bg-neutral-900 px-5 py-2 text-sm font-semibold text-white transition-colors"
+                  : "rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-700 ring-1 ring-neutral-200 transition-colors hover:bg-neutral-100"
               }
             >
               {mode.label}

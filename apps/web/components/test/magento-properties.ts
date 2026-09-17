@@ -1,4 +1,4 @@
-import type { Property, PropertyStatus } from "@/components/PropertyCard/PropertyCard.types";
+import type { Property, PropertyStatus } from "@/domain/property";
 import magentoMock from "@/data/mock-properties.json";
 
 export type MagentoPropertyItem = {

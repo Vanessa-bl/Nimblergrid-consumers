@@ -1,4 +1,4 @@
-import type { Property } from "@/components/PropertyCard/PropertyCard.types";
+import type { Property } from "@/domain/property";
 import type { DocProp } from "@/components/test/props-table";
 
 export const PROPERTY_CARD_PROPS: readonly DocProp[] = [

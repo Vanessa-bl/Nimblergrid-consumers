@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { UserProfileCard } from "@/components/UserProfileCard/UserProfileCard";
-import { ProfileEditModal } from "@/components/UserProfileCard/ProfileEditModal";
-import type { UserProfileData } from "@/components/UserProfileCard/UserProfileCard.types";
+import { UserProfileCard } from "@/features/profile/UserProfileCard/UserProfileCard";
+import { ProfileEditModal } from "@/features/profile/UserProfileCard/ProfileEditModal";
+import type { UserProfileData } from "@/domain/user-profile";
 
 const INITIAL_PROFILE: UserProfileData = {
   id: "profile-demo-1",

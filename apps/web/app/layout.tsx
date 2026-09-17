@@ -26,7 +26,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script nonce={nonce} />
       </head>
-      <body className="flex min-h-full flex-col bg-zinc-50 font-sans text-zinc-900">
+      <body className="flex min-h-full flex-col bg-neutral-50 font-sans text-neutral-900">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

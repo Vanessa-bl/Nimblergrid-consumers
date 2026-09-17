@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { Checkbox, CheckboxControl } from "@/components/checkbox";
-import { Avatar } from "@/components/avatar/Avatar";
-import type { AvatarSize, AvatarTone } from "@/components/avatar/Avatar.types";
-import { UserProfileCardExample } from "@/components/UserProfileCard/UserProfileCard.example";
+import { Checkbox, CheckboxControl } from "@/components/ui/checkbox";
+import { Avatar } from "@/components/ui/avatar/Avatar";
+import type { AvatarSize, AvatarTone } from "@/components/ui/avatar/Avatar.types";
+import { UserProfileCardExample } from "@/features/profile/UserProfileCard/UserProfileCard.example";
 import { DatePicker } from "@/components/ui/date-picker";
-import { Pagination } from "@/components/Pagination/Pagination";
+import { Pagination } from "@/components/ui/Pagination/Pagination";
 import { ViewModeToggle } from "@/components/ui/view-mode-toggle";
-import { PropertyCard } from "@/components/PropertyCard/PropertyCard";
+import { PropertyCard } from "@/features/properties/PropertyCard/PropertyCard";
 import {
   DEMO_PROPERTIES,
   PROPERTY_CARD_PROPS,
@@ -18,10 +18,10 @@ import {
   USER_PROFILE_CARD_PROPS,
   USER_PROFILE_CARD_USAGE,
 } from "@/components/test/user-profile-fixtures";
-import { TextField } from "@/components/form/TextField/TextField";
-import { CurrencyInput } from "@/components/form/CurrencyInput/CurrencyInput";
-import { PillSelect } from "@/components/form/PillSelect/PillSelect";
-import { InfoTooltip } from "@/components/form/InfoTooltip/InfoTooltip";
+import { TextField } from "@/components/ui/form/TextField/TextField";
+import { CurrencyInput } from "@/components/ui/form/CurrencyInput/CurrencyInput";
+import { PillSelect } from "@/components/ui/form/PillSelect/PillSelect";
+import { InfoTooltip } from "@/components/ui/form/InfoTooltip/InfoTooltip";
 import {
   CREDIT_OPTIONS,
   CURRENCY_INPUT_PROPS,
@@ -31,15 +31,15 @@ import {
   PILL_SELECT_PROPS,
   TEXT_FIELD_PROPS,
 } from "@/components/test/form-fixtures";
-import { FilterChipButton } from "@/components/filters/FilterChipButton/FilterChipButton";
-import { MoveInByDropdown } from "@/components/filters/MoveInByDropdown/MoveInByDropdown";
-import { PriceRangeDropdown } from "@/components/filters/PriceRangeDropdown/PriceRangeDropdown";
-import { PropertySearchBar } from "@/components/filters/PropertySearchBar/PropertySearchBar";
-import { PropertyTypeDropdown } from "@/components/filters/PropertyTypeDropdown/PropertyTypeDropdown";
-import { RoomsFilterDropdown } from "@/components/filters/RoomsFilterDropdown/RoomsFilterDropdown";
+import { FilterChipButton } from "@/features/filters/FilterChipButton/FilterChipButton";
+import { MoveInByDropdown } from "@/features/filters/MoveInByDropdown/MoveInByDropdown";
+import { PriceRangeDropdown } from "@/features/filters/PriceRangeDropdown/PriceRangeDropdown";
+import { PropertySearchBar } from "@/features/filters/PropertySearchBar/PropertySearchBar";
+import { PropertyTypeDropdown } from "@/features/filters/PropertyTypeDropdown/PropertyTypeDropdown";
+import { RoomsFilterDropdown } from "@/features/filters/RoomsFilterDropdown/RoomsFilterDropdown";
 import { PropsTable, type DocProp } from "@/components/test/props-table";
-import type { PriceRangeFilter } from "@/components/filters/PriceRangeDropdown/PriceRangeDropdown.types";
-import type { RoomsSelection } from "@/components/filters/RoomsFilterDropdown/RoomsFilterDropdown.types";
+import type { PriceRangeFilter } from "@/features/filters/PriceRangeDropdown/PriceRangeDropdown.types";
+import type { RoomsSelection } from "@/features/filters/RoomsFilterDropdown/RoomsFilterDropdown.types";
 
 const SEARCH_PROPS: readonly DocProp[] = [
   {
@@ -346,25 +346,25 @@ function ShowcaseSection({
   usage,
 }: Readonly<ShowcaseSectionProps>) {
   return (
-    <section className="grid gap-8 border-t border-zinc-200 py-14 lg:grid-cols-[minmax(0,1fr)_440px]">
+    <section className="grid gap-8 border-t border-neutral-200 py-14 lg:grid-cols-[minmax(0,1fr)_440px]">
       <div className="min-w-0">
-        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-[28px]">
+        <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 sm:text-[28px]">
           {title}
         </h2>
-        <p className="mt-2 max-w-[64ch] text-sm leading-relaxed text-zinc-600">
+        <p className="mt-2 max-w-[64ch] text-sm leading-relaxed text-neutral-600">
           {description}
         </p>
         <PropsTable props={props} />
         {usage !== undefined ? (
           <>
-            <h3 className="mt-8 text-sm font-semibold text-zinc-900">Uso</h3>
-            <pre className="mt-2 overflow-x-auto rounded-xl bg-zinc-900 p-4 font-mono text-[12.5px] leading-relaxed text-zinc-100">
+            <h3 className="mt-8 text-sm font-semibold text-neutral-900">Uso</h3>
+            <pre className="mt-2 overflow-x-auto rounded-xl bg-neutral-900 p-4 font-mono text-[12.5px] leading-relaxed text-neutral-100">
               {usage}
             </pre>
           </>
         ) : null}
       </div>
-      <div className="min-w-0 self-start rounded-2xl border border-zinc-200 bg-zinc-50/70 p-6">
+      <div className="min-w-0 self-start rounded-2xl border border-neutral-200 bg-neutral-50/70 p-6">
         {example}
       </div>
     </section>
@@ -418,7 +418,7 @@ function PropertyCardExample() {
         onFavoriteToggle={handleFavoriteToggle}
         onSelectionChange={handleSelectionChange}
       />
-      <p className="min-h-5 text-sm text-zinc-500">
+      <p className="min-h-5 text-sm text-neutral-500">
         {cardProperty.actions.isFavorite ? "Favorita" : "No favorita"}
         {" · "}
         {isSelected ? "Seleccionada" : "Sin seleccionar"}
@@ -438,7 +438,7 @@ function SearchExample() {
         onValueChange={setQuery}
         onSearchSubmit={setSubmitted}
       />
-      <p className="min-h-5 text-sm text-zinc-500">
+      <p className="min-h-5 text-sm text-neutral-500">
         {submitted !== "" ? `Enviado: "${submitted}"` : "Enter o la lupa envían el texto"}
       </p>
     </div>
@@ -532,7 +532,7 @@ function ViewToggleExample() {
         value={view}
         onChange={setView}
       />
-      <p className="text-sm text-zinc-500">
+      <p className="text-sm text-neutral-500">
         Vista seleccionada: {view === "list" ? "List" : "Map"}
       </p>
     </div>
@@ -552,7 +552,7 @@ function CheckboxExample() {
         aria-label="Seleccionar fila (CheckboxControl)"
         defaultChecked
       />
-      <p className="text-xs text-zinc-400">
+      <p className="text-xs text-neutral-400">
         CheckboxControl es la variante standalone sin texto, usada en tablas y
         en el modo selección de PropertyCard.
       </p>
@@ -569,7 +569,7 @@ function DateExample() {
         value={date}
         onChange={setDate}
       />
-      <p className="min-h-5 text-sm text-zinc-500">
+      <p className="min-h-5 text-sm text-neutral-500">
         {date !== null ? `Elegida: ${date}` : "Sin fecha"}
       </p>
     </div>
@@ -593,7 +593,7 @@ const AVATAR_TONE_DEMOS: readonly { tone: AvatarTone; label: string }[] = [
 
 function ExampleCaption({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-zinc-400">
+    <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-neutral-400">
       {children}
     </p>
   );
@@ -608,7 +608,7 @@ function AvatarExample() {
           {AVATAR_SIZE_DEMOS.map(({ size, label }) => (
             <div key={size} className="flex flex-col items-center gap-1.5">
               <Avatar name="Iraima Hurtado" size={size} />
-              <span className="text-[11px] text-zinc-500">{label}</span>
+              <span className="text-[11px] text-neutral-500">{label}</span>
             </div>
           ))}
         </div>
@@ -619,11 +619,11 @@ function AvatarExample() {
           {AVATAR_TONE_DEMOS.map(({ tone, label }) => (
             <div key={tone} className="flex flex-col items-center gap-1.5">
               <Avatar name="Marta Rossi" size="lg" tone={tone} />
-              <span className="font-mono text-[11px] text-zinc-500">{label}</span>
+              <span className="font-mono text-[11px] text-neutral-500">{label}</span>
             </div>
           ))}
         </div>
-        <p className="mt-3 max-w-[38ch] text-xs leading-relaxed text-zinc-500">
+        <p className="mt-3 max-w-[38ch] text-xs leading-relaxed text-neutral-500">
           Rose es el tono por defecto; light y muted están pensados para
           superficies blancas (llevan borde sutil).
         </p>
@@ -637,7 +637,7 @@ function AvatarExample() {
             avatarUrl="https://avatars.invalid/hallo-avatar.jpg"
             alt="Foto de Iraima Hurtado"
           />
-          <p className="text-xs leading-relaxed text-zinc-500">
+          <p className="text-xs leading-relaxed text-neutral-500">
             La URL no existe: al fallar la carga el avatar pasa solo a las
             iniciales del nombre.
           </p>
@@ -647,7 +647,7 @@ function AvatarExample() {
         <ExampleCaption>Sin nombre</ExampleCaption>
         <div className="flex items-center gap-3">
           <Avatar size="lg" tone="muted" />
-          <p className="text-xs leading-relaxed text-zinc-500">
+          <p className="text-xs leading-relaxed text-neutral-500">
             Sin nombre ni imagen se muestra una silueta neutral marcada como
             decorativa.
           </p>
@@ -675,7 +675,7 @@ function TextFieldExample() {
         onChange={(event) => setName(event.target.value)}
         onBlur={() => setTouched(true)}
       />
-      <div className="space-y-4 border-t border-zinc-200 pt-4">
+      <div className="space-y-4 border-t border-neutral-200 pt-4">
         <TextField
           label="Email"
           readOnly
@@ -706,7 +706,7 @@ function CurrencyExample() {
         placeholder="90000"
         helper="Escribí solo números: los separadores se agregan solos."
       />
-      <p className="min-h-5 text-sm text-zinc-500">
+      <p className="min-h-5 text-sm text-neutral-500">
         Valor plano: {digits === "" ? "—" : digits}
       </p>
     </div>
@@ -740,7 +740,7 @@ function PillSelectExample() {
         value={credit}
         onChange={setCredit}
       />
-      <p className="min-h-5 border-t border-zinc-200 pt-3 text-sm text-zinc-500">
+      <p className="min-h-5 border-t border-neutral-200 pt-3 text-sm text-neutral-500">
         Household: {household ?? "—"} · Pets: {pets ?? "—"} · Credit:{" "}
         {credit ?? "—"}
       </p>
@@ -799,7 +799,7 @@ function PaginationExample() {
   return (
     <div className="space-y-4">
       <Pagination page={page} pageCount={12} onPageChange={setPage} />
-      <p className="text-center text-sm text-zinc-500">
+      <p className="text-center text-sm text-neutral-500">
         Página actual: {page} de 12
       </p>
     </div>
@@ -810,13 +810,13 @@ function InfoTooltipExample() {
   return (
     <div className="space-y-5">
       <div className="flex items-center gap-2">
-        <span className="text-sm font-medium text-zinc-900">
+        <span className="text-sm font-medium text-neutral-900">
           Total people in household
         </span>
         <InfoTooltip content="Sumá todas las personas que van a vivir en la propiedad, incluidos menores." />
       </div>
       <div className="flex items-center justify-between gap-2">
-        <span className="text-sm font-medium text-zinc-900">
+        <span className="text-sm font-medium text-neutral-900">
           Estimated household income
         </span>
         <InfoTooltip
@@ -825,12 +825,12 @@ function InfoTooltipExample() {
         />
       </div>
       <div className="flex items-center gap-2">
-        <span className="text-sm font-medium text-zinc-900">
+        <span className="text-sm font-medium text-neutral-900">
           Your credit score
         </span>
         <InfoTooltip content="Rango de tu score crediticio según el último reporte." />
       </div>
-      <p className="text-xs text-zinc-400">
+      <p className="text-xs text-neutral-400">
         El tooltip abre con click y cierra con Escape o click afuera.
       </p>
     </div>
@@ -841,10 +841,10 @@ export function ComponentShowcase() {
   return (
     <div className="mx-auto max-w-[1200px] px-4 py-14 sm:px-6">
       <header className="max-w-[720px] pb-4">
-        <h1 className="text-3xl font-semibold leading-[1.1] tracking-tight text-zinc-900 sm:text-4xl">
+        <h1 className="text-3xl font-semibold leading-[1.1] tracking-tight text-neutral-900 sm:text-4xl">
           Test de componentes
         </h1>
-        <p className="mt-3 text-base leading-relaxed text-zinc-600">
+        <p className="mt-3 text-base leading-relaxed text-neutral-600">
           Cada bloque documenta un componente del proyecto: qué recibe por
           props, qué hace cada prop y un ejemplo interactivo. Probá los
           dropdowns, el teclado (Escape, flechas, Tab) y los modos controlado /
@@ -852,15 +852,15 @@ export function ComponentShowcase() {
         </p>
       </header>
 
-      <section className="border-t border-zinc-200 py-10">
-        <div className="rounded-2xl border border-zinc-200 bg-white p-3 sm:p-6">
+      <section className="border-t border-neutral-200 py-10">
+        <div className="rounded-2xl border border-neutral-200 bg-white p-3 sm:p-6">
           <PropertyCardExample />
         </div>
         <div className="mt-8 max-w-[720px]">
-          <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-[28px]">
+          <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 sm:text-[28px]">
             PropertyCard
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+          <p className="mt-2 text-sm leading-relaxed text-neutral-600">
             Card inmobiliaria horizontal (imagen 30% / contenido 70%)
             totalmente prop-driven: sin datos propios, galería navegable,
             favorito y selección controlados por el padre. Arriba se ve la
@@ -868,8 +868,8 @@ export function ComponentShowcase() {
             selección múltiple.
           </p>
           <PropsTable props={PROPERTY_CARD_PROPS} />
-          <h3 className="mt-8 text-sm font-semibold text-zinc-900">Uso</h3>
-          <pre className="mt-2 overflow-x-auto rounded-xl bg-zinc-900 p-4 font-mono text-[12.5px] leading-relaxed text-zinc-100">
+          <h3 className="mt-8 text-sm font-semibold text-neutral-900">Uso</h3>
+          <pre className="mt-2 overflow-x-auto rounded-xl bg-neutral-900 p-4 font-mono text-[12.5px] leading-relaxed text-neutral-100">
             {PROPERTY_CARD_USAGE}
           </pre>
         </div>
@@ -940,14 +940,14 @@ export function ComponentShowcase() {
 
       <ShowcaseSection
         title="Avatar"
-        description="Avatar circular reutilizable de la familia atómica components/avatar. Con avatarUrl renderiza la imagen (img plano, apto para URLs remotas) y ante cualquier error de carga cae a las iniciales del nombre; sin nombre muestra una silueta. Cada tamaño (xs–xl) y tono (rose, dark, light, muted) es una clase estática precomputada."
+        description="Avatar circular reutilizable de la familia atómica components/ui/avatar. Con avatarUrl renderiza la imagen (img plano, apto para URLs remotas) y ante cualquier error de carga cae a las iniciales del nombre; sin nombre muestra una silueta. Cada tamaño (xs–xl) y tono (rose, dark, light, muted) es una clase estática precomputada."
         props={AVATAR_PROPS}
         example={<AvatarExample />}
       />
 
       <ShowcaseSection
         title="UserProfileCard"
-        description="Card de perfil Tus datos compuesta con el Avatar del proyecto. Prop-driven y sin props obligatorias: con data muestra nombre y filas de contacto no vacías, con isLoading el skeleton (aria-busy) y con data null el estado vacío informativo. El botón Editar datos solo existe si llega onEdit y recibe el objeto completo. Los adapters puros Supabase y Magento viven en UserProfileCard.types."
+        description="Card de perfil Tus datos compuesta con el Avatar del proyecto. Prop-driven y sin props obligatorias: con data muestra nombre y filas de contacto no vacías, con isLoading el skeleton (aria-busy) y con data null el estado vacío informativo. El botón Editar datos solo existe si llega onEdit y recibe el objeto completo. Los adapters puros Supabase y Magento viven en domain/user-profile.ts."
         props={USER_PROFILE_CARD_PROPS}
         example={<UserProfileCardExample />}
         usage={USER_PROFILE_CARD_USAGE}
@@ -969,7 +969,7 @@ export function ComponentShowcase() {
 
       <ShowcaseSection
         title="PillSelect"
-        description="Selector de píldoras single-select con semántica de radios reales: role radiogroup, navegación por flechas, un solo tab stop y aria-labelledby desde el título. La opción activa usa el patrón oscuro zinc-900 del proyecto. Sirve para household, pets, credit score, lease duration, bedrooms y parking."
+        description="Selector de píldoras single-select con semántica de radios reales: role radiogroup, navegación por flechas, un solo tab stop y aria-labelledby desde el título. La opción activa usa el patrón oscuro neutral-900 del proyecto. Sirve para household, pets, credit score, lease duration, bedrooms y parking."
         props={PILL_SELECT_PROPS}
         example={<PillSelectExample />}
       />
@@ -983,7 +983,7 @@ export function ComponentShowcase() {
 
       <ShowcaseSection
         title="Pagination"
-        description="Paginador de la familia atómica del proyecto: botones pill con la página actual en zinc-900, elipsis automáticas cuando hay saltos (sibling/boundary), y chevrons con aria-label. No se renderiza con una sola página. Se usa en test-list y en el tab Contactados de test-profile."
+        description="Paginador de la familia atómica del proyecto: botones pill con la página actual en neutral-900, elipsis automáticas cuando hay saltos (sibling/boundary), y chevrons con aria-label. No se renderiza con una sola página. Se usa en test-list y en el tab Contactados de test-profile."
         props={PAGINATION_PROPS}
         example={<PaginationExample />}
       />

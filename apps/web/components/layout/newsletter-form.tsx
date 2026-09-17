@@ -1,12 +1,12 @@
 export function NewsletterForm() {
   return (
-    <div className="bg-rose-50">
+    <div className="bg-brand-50">
       <div className="mx-auto flex max-w-[1640px] flex-col items-start gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-7">
         <div className="max-w-md">
-          <h3 className="font-sans text-[22px] font-semibold leading-tight text-zinc-900">
+          <h3 className="font-sans text-[22px] font-semibold leading-tight text-neutral-900">
             Lorem ipsum dolor!
           </h3>
-          <p className="mt-2 text-[14.5px] leading-relaxed text-zinc-600">
+          <p className="mt-2 text-[14.5px] leading-relaxed text-neutral-600">
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut.
           </p>
         </div>
@@ -23,11 +23,11 @@ export function NewsletterForm() {
             required
             autoComplete="email"
             placeholder="Lorem ipsum dolor sit amet consectetur"
-            className="min-w-0 flex-1 rounded-full border border-zinc-200 bg-white px-5 py-3 text-[14.5px] text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-rose-400"
+            className="min-w-0 flex-1 rounded-full border border-neutral-200 bg-white px-5 py-3 text-[14.5px] text-neutral-900 outline-none placeholder:text-neutral-400 focus:border-brand-400"
           />
           <button
             type="submit"
-            className="rounded-full bg-rose-500 px-6 py-3 text-[14.5px] font-semibold text-white transition-all hover:brightness-95 hover:-translate-y-px"
+            className="rounded-full bg-brand-500 px-6 py-3 text-[14.5px] font-semibold text-white transition-all hover:brightness-95 hover:-translate-y-px"
           >
             Lorem
           </button>

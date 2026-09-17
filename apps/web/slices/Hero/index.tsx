@@ -1,6 +1,6 @@
 import type { Content } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
-import { Hero } from "@/components/home/hero";
+import { Hero } from "@/features/home/hero";
 
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 

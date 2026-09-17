@@ -1,7 +1,6 @@
+import type { NavItem } from "@/domain/navigation";
 import { createClient } from "@/prismicio";
-import { extractHrefFromRichText, type NavItem } from "./nav-parser";
-
-export type { NavItem } from "./nav-parser";
+import { extractHrefFromRichText } from "./nav-parser";
 
 export const getNavigationLinks = async (): Promise<NavItem[]> => {
   const client = createClient();

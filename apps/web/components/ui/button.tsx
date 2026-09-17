@@ -8,12 +8,12 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap transition-all";
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-rose-500 text-white hover:brightness-95 hover:-translate-y-px",
-  dark: "bg-zinc-900 text-white hover:brightness-110 hover:-translate-y-px",
+  primary: "bg-brand-500 text-white hover:brightness-95 hover:-translate-y-px",
+  dark: "bg-neutral-900 text-white hover:brightness-110 hover:-translate-y-px",
   "outline-dark":
-    "border-[1.5px] border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white",
+    "border-[1.5px] border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white",
   "outline-light":
-    "border-[1.5px] border-white/50 text-white hover:bg-white hover:text-zinc-900",
+    "border-[1.5px] border-white/50 text-white hover:bg-white hover:text-neutral-900",
 };
 
 const sizeClasses: Record<Size, string> = {

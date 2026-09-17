@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ViewModeToggle, type ViewModeOption } from "@/components/ui/view-mode-toggle";
 import { ProfileCardDemo } from "@/components/test/profile-card-demo";
 import { ContactedCards } from "@/components/test/contacted-cards";
-import { RenterProfileForm } from "@/components/renter-profile/RenterProfileForm";
+import { RenterProfileForm } from "@/features/profile/renter-profile/RenterProfileForm";
 
 type TabId = "profile" | "renter-profile" | "contacted";
 
@@ -26,7 +26,7 @@ export function TestProfileLayout() {
   return (
     <div className="pb-24">
       <div className="px-4 pt-10 sm:px-6">
-        <h1 className="text-left text-3xl font-bold leading-[1.1] tracking-tight text-zinc-900 sm:text-4xl">
+        <h1 className="text-left text-3xl font-bold leading-[1.1] tracking-tight text-neutral-900 sm:text-4xl">
           Your home
         </h1>
         <div className="mt-6">
@@ -56,10 +56,10 @@ export function TestProfileLayout() {
         className="px-4 pt-10 sm:px-6"
       >
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 sm:text-3xl">
             Renter profile
           </h2>
-          <p className="mt-2 max-w-[64ch] text-sm leading-relaxed text-zinc-600">
+          <p className="mt-2 max-w-[64ch] text-sm leading-relaxed text-neutral-600">
             We&apos;ll include any details you share here with rental managers
             you contact. This helps complete the picture of you as a renter.
           </p>

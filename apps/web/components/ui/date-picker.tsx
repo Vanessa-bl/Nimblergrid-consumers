@@ -23,7 +23,7 @@ export function DatePicker(props: Readonly<DatePickerProps>) {
         const nextValue = event.target.value;
         onChange(nextValue === "" ? null : nextValue);
       }}
-      className={`h-11 w-full cursor-pointer rounded-xl border border-zinc-300 bg-white px-3 text-sm text-zinc-900 outline-none transition-colors hover:border-zinc-400 focus:border-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500 ${
+      className={`h-11 w-full cursor-pointer rounded-xl border border-neutral-300 bg-white px-3 text-sm text-neutral-900 outline-none transition-colors hover:border-neutral-400 focus:border-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 ${
         className ?? ""
       }`}
     />

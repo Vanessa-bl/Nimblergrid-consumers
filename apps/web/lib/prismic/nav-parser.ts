@@ -1,10 +1,5 @@
 import type { Content } from "@prismicio/client";
-
-export type NavItem = {
-  href: string;
-  label: string;
-  external: boolean;
-};
+import type { NavItem } from "@/domain/navigation";
 
 export type UrlField = Content.CategoriesSliceDefaultPrimaryNavCategoriesItem["url"];
 export type ParsedHref = Pick<NavItem, "href" | "external">;

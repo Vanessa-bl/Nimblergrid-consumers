@@ -1,0 +1,85 @@
+/* =============================================================================
+   Design tokens — nimblergrid
+   Fuente única de la identidad visual. CSS puro, sin frameworks:
+   los consume Tailwind v4 (vía @theme en globals.css) y cualquier otro front.
+
+   Cómo se usa:
+   - Primitivos: la paleta cruda (brand = marca, neutral = grises, decor = ilustración).
+   - Semánticos: el significado ("fondo", "texto", "acento"). Los componentes
+     consumen semánticos; cambiar la identidad = tocar primitivos.
+
+   Reglas:
+   - Prohibido hardcodear colores en componentes (app/** y components/**).
+   - Escala de marca completa (50–950) para tener margen de diseño.
+   ============================================================================= */
+
+:root {
+  /* --- Marca (primitivos) ----------------------------------------------------
+     Familia del acento. Valor actual = escala rosa del sistema. */
+  --brand-50: oklch(96.9% 0.015 12.422);
+  --brand-100: oklch(94.1% 0.03 12.58);
+  --brand-200: oklch(89.2% 0.058 10.001);
+  --brand-300: oklch(81% 0.117 11.638);
+  --brand-400: oklch(71.2% 0.194 13.428);
+  --brand-500: #ff2056;
+  --brand-600: oklch(58.6% 0.253 17.585);
+  --brand-700: oklch(51.4% 0.222 16.935);
+  --brand-800: oklch(45.5% 0.188 13.697);
+  --brand-900: oklch(41% 0.159 10.272);
+  --brand-950: oklch(27.1% 0.105 12.094);
+
+  /* --- Neutros (primitivos) --------------------------------------------------
+     Escala de grises de la app. */
+  --neutral-50: oklch(98.5% 0 none);
+  --neutral-100: oklch(96.7% 0.001 286.375);
+  --neutral-200: oklch(92% 0.004 286.32);
+  --neutral-300: oklch(87.1% 0.006 286.286);
+  --neutral-400: oklch(70.5% 0.015 286.067);
+  --neutral-500: oklch(55.2% 0.016 285.938);
+  --neutral-600: oklch(44.2% 0.017 285.786);
+  --neutral-700: oklch(37% 0.013 285.805);
+  --neutral-800: oklch(27.4% 0.006 286.033);
+  --neutral-900: oklch(21% 0.006 285.885);
+  --neutral-950: oklch(14.1% 0.005 285.823);
+
+  /* --- Decorativos (NO marca) ------------------------------------------------
+     Ilustraciones y gradientes de relleno. No representan la identidad. */
+  --decor-map-land: #ece9e0;
+  --decor-map-road: #d8d4c6;
+  --decor-map-road-strong: #c9c2b0;
+  --decor-map-green: #d5e8d4;
+  --decor-map-green-edge: #b7cfb5;
+  --decor-map-blue: #cddceb;
+  --decor-map-blue-edge: #aec3da;
+  --decor-hero-from: #e7dbd9;
+  --decor-hero-to: #cbb6b4;
+  --decor-features-from: #e0e4e2;
+  --decor-features-to: #c2cac6;
+
+  /* --- Semánticos ------------------------------------------------------------
+     El contrato de los componentes. Cambiar un uso = tocar acá. */
+  --bg: var(--neutral-50);
+  --surface: #ffffff;
+  --text: var(--neutral-900);
+  --text-muted: var(--neutral-600);
+  --border: var(--neutral-200);
+  --accent: var(--brand-500);
+  --accent-strong: var(--brand-600);
+  --on-accent: #ffffff;
+  --overlay: rgb(0 0 0 / 0.4);
+  --success: #16a34a;
+  --focus-ring: #0865d7;
+
+  /* --- Elevación (sombras) ---------------------------------------------------
+     Profundidad de la interfaz. Se consumen vía utilidades shadow-* en globals. */
+  --elevation-subtle: 0 2px 10px -6px rgb(24 24 27 / 0.10);
+  --elevation-card: 0 10px 30px -12px rgb(15 23 42 / 0.25);
+  --elevation-card-hover: 0 12px 32px -14px rgb(24 24 27 / 0.22);
+  --elevation-toolbar: 0 4px 16px -12px rgb(24 24 27 / 0.20);
+  --elevation-input: 0 10px 30px -12px rgb(15 23 42 / 0.18);
+  --elevation-popover: 0 20px 50px -20px rgb(24 24 27 / 0.30);
+  --elevation-modal: 0 20px 50px -20px rgb(24 24 27 / 0.35);
+  --elevation-panel: 0 16px 40px -16px rgb(24 24 27 / 0.35);
+  --elevation-pin: 0 2px 6px rgb(24 24 27 / 0.35);
+  --elevation-thumb: 0 2px 6px rgb(24 24 27 / 0.20);
+}

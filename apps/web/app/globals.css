@@ -1,5 +1,65 @@
 @import "tailwindcss";
+@import "./tokens.css";
 
 @theme {
   --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme inline {
+  /* Escalas primitivas */
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-950: var(--neutral-950);
+
+  /* Semánticos */
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-foreground: var(--text);
+  --color-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-on-accent: var(--on-accent);
+  --color-overlay: var(--overlay);
+
+  /* Decorativos (ilustración) */
+  --color-map-land: var(--decor-map-land);
+  --color-map-road: var(--decor-map-road);
+  --color-map-road-strong: var(--decor-map-road-strong);
+  --color-map-green: var(--decor-map-green);
+  --color-map-green-edge: var(--decor-map-green-edge);
+  --color-map-blue: var(--decor-map-blue);
+  --color-map-blue-edge: var(--decor-map-blue-edge);
+
+  /* Elevación */
+  --shadow-subtle: var(--elevation-subtle);
+  --shadow-card: var(--elevation-card);
+  --shadow-card-hover: var(--elevation-card-hover);
+  --shadow-toolbar: var(--elevation-toolbar);
+  --shadow-input: var(--elevation-input);
+  --shadow-popover: var(--elevation-popover);
+  --shadow-modal: var(--elevation-modal);
+  --shadow-panel: var(--elevation-panel);
+  --shadow-pin: var(--elevation-pin);
+  --shadow-thumb: var(--elevation-thumb);
 }

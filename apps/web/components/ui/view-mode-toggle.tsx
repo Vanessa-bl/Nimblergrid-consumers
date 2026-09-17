@@ -88,11 +88,11 @@ export function ViewModeToggle<T extends string | number>(
       role="tablist"
       aria-label={ariaLabel}
       onKeyDown={handleKeyDown}
-      className={`relative inline-flex w-full items-center rounded-full bg-stone-100 p-1 ${className ?? ""}`}
+      className={`relative inline-flex w-full items-center rounded-full bg-neutral-100 p-1 ${className ?? ""}`}
     >
       <span
         aria-hidden="true"
-        className="absolute bottom-1 left-1 top-1 rounded-full border border-gray-200/60 bg-white shadow-md transition-transform duration-200 ease-in-out"
+        className="absolute bottom-1 left-1 top-1 rounded-full border border-neutral-200/60 bg-white shadow-md transition-transform duration-200 ease-in-out"
         style={{
           width: pillWidth,
           transform: `translateX(${activeIndex * 100}%)`,
@@ -111,9 +111,9 @@ export function ViewModeToggle<T extends string | number>(
             tabIndex={selected ? 0 : -1}
             aria-selected={selected}
             onClick={() => selectOption(option)}
-            className={`relative z-10 flex flex-1 cursor-pointer items-center justify-center gap-1.5 whitespace-nowrap rounded-full font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500 ${
+            className={`relative z-10 flex flex-1 cursor-pointer items-center justify-center gap-1.5 whitespace-nowrap rounded-full font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 ${
               sizeClasses[size]
-            } ${selected ? "font-semibold text-zinc-900" : "text-zinc-500 hover:text-zinc-800"}`}
+            } ${selected ? "font-semibold text-neutral-900" : "text-neutral-500 hover:text-neutral-800"}`}
           >
             {option.icon}
             {option.label}

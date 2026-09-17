@@ -3,7 +3,7 @@ import type { AnchorHTMLAttributes } from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { HeaderMobileMenu } from "@/components/layout/header-mobile-menu";
-import type { NavItem } from "@/lib/prismic/navigation";
+import type { NavItem } from "@/domain/navigation";
 
 jest.mock("next/link", () => ({
   __esModule: true,

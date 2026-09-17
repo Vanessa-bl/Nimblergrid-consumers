@@ -3,20 +3,20 @@
 import { useCallback, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDownIcon } from "@/components/ui/icons/chevron-down";
-import { MapView } from "@/components/MapView/MapView";
-import { Pagination } from "@/components/Pagination/Pagination";
-import { FiltersSidebar } from "@/components/filters/FiltersSidebar/FiltersSidebar";
-import { FiltersSidebarButton } from "@/components/filters/FiltersSidebar/FiltersSidebar";
-import type { FiltersSidebarState } from "@/components/filters/FiltersSidebar/FiltersSidebar.types";
-import { MoveInByDropdown } from "@/components/filters/MoveInByDropdown/MoveInByDropdown";
-import { PriceRangeDropdown } from "@/components/filters/PriceRangeDropdown/PriceRangeDropdown";
-import { PropertySearchBar } from "@/components/filters/PropertySearchBar/PropertySearchBar";
-import { PropertyTypeDropdown } from "@/components/filters/PropertyTypeDropdown/PropertyTypeDropdown";
-import { RoomsFilterDropdown } from "@/components/filters/RoomsFilterDropdown/RoomsFilterDropdown";
+import { MapView } from "@/features/properties/MapView/MapView";
+import { Pagination } from "@/components/ui/Pagination/Pagination";
+import { FiltersSidebar } from "@/features/filters/FiltersSidebar/FiltersSidebar";
+import { FiltersSidebarButton } from "@/features/filters/FiltersSidebar/FiltersSidebar";
+import type { FiltersSidebarState } from "@/features/filters/FiltersSidebar/FiltersSidebar.types";
+import { MoveInByDropdown } from "@/features/filters/MoveInByDropdown/MoveInByDropdown";
+import { PriceRangeDropdown } from "@/features/filters/PriceRangeDropdown/PriceRangeDropdown";
+import { PropertySearchBar } from "@/features/filters/PropertySearchBar/PropertySearchBar";
+import { PropertyTypeDropdown } from "@/features/filters/PropertyTypeDropdown/PropertyTypeDropdown";
+import { RoomsFilterDropdown } from "@/features/filters/RoomsFilterDropdown/RoomsFilterDropdown";
 import { ViewModeToggle } from "@/components/ui/view-mode-toggle";
-import { PropertyCard } from "@/components/PropertyCard/PropertyCard";
-import type { PriceRangeFilter } from "@/components/filters/PriceRangeDropdown/PriceRangeDropdown.types";
-import type { RoomsSelection } from "@/components/filters/RoomsFilterDropdown/RoomsFilterDropdown.types";
+import { PropertyCard } from "@/features/properties/PropertyCard/PropertyCard";
+import type { PriceRangeFilter } from "@/features/filters/PriceRangeDropdown/PriceRangeDropdown.types";
+import type { RoomsSelection } from "@/features/filters/RoomsFilterDropdown/RoomsFilterDropdown.types";
 import {
   getMockPropertyItems,
   toProperty,
@@ -301,7 +301,7 @@ export function SearchResultsLayout() {
 
   return (
     <div>
-      <div className="sticky top-16 z-30 border-b border-zinc-200 bg-white px-4 py-3 shadow-[0_4px_16px_-12px_rgba(24,24,27,0.2)] sm:px-6">
+      <div className="sticky top-16 z-30 border-b border-neutral-200 bg-white px-4 py-3 shadow-toolbar sm:px-6">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
           <div className="min-w-0 flex-1">
             <PropertySearchBar
@@ -377,10 +377,10 @@ export function SearchResultsLayout() {
           <div className="px-4 pb-14 pt-4 sm:px-6">
             <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
               <div>
-                <h1 className="text-xl font-semibold tracking-tight text-zinc-900 sm:text-2xl">
+                <h1 className="text-xl font-semibold tracking-tight text-neutral-900 sm:text-2xl">
                   Southlake, TX Rentals
                 </h1>
-                <p className="mt-1 text-sm text-zinc-500">
+                <p className="mt-1 text-sm text-neutral-500">
                   {visibleCount} {visibleCount === 1 ? "home" : "homes"}
                   {visibleCount !== allItems.length
                     ? ` of ${allItems.length}`
@@ -388,13 +388,13 @@ export function SearchResultsLayout() {
                 </p>
                 {selectedCount > 0 ? (
                   <div className="mt-2 flex items-center gap-3 text-sm">
-                    <span className="font-semibold text-[#ff2056]">
+                    <span className="font-semibold text-brand-500">
                       {selectedCount} selected
                     </span>
                     <button
                       type="button"
                       onClick={() => setSelectedIds(new Set())}
-                      className="cursor-pointer font-medium text-zinc-500 underline-offset-2 hover:text-zinc-900 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500"
+                      className="cursor-pointer font-medium text-neutral-500 underline-offset-2 hover:text-neutral-900 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
                     >
                       Clear selection
                     </button>
@@ -411,7 +411,7 @@ export function SearchResultsLayout() {
                       setSort(event.target.value as SortOption);
                       setPage(1);
                     }}
-                    className="h-10 cursor-pointer appearance-none rounded-full border border-zinc-200 bg-white pl-4 pr-9 text-sm font-medium text-zinc-800 outline-none transition-colors hover:border-zinc-400 focus:border-zinc-900"
+                    className="h-10 cursor-pointer appearance-none rounded-full border border-neutral-200 bg-white pl-4 pr-9 text-sm font-medium text-neutral-800 outline-none transition-colors hover:border-neutral-400 focus:border-neutral-900"
                   >
                     {SORT_OPTIONS.map((option) => (
                       <option key={option.value} value={option.value}>
@@ -419,7 +419,7 @@ export function SearchResultsLayout() {
                       </option>
                     ))}
                   </select>
-                  <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+                  <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500" />
                 </label>
                 <div className="w-[170px] shrink-0">
                   <ViewModeToggle
@@ -466,7 +466,7 @@ export function SearchResultsLayout() {
                 ) : null}
               </>
             ) : (
-              <p className="rounded-2xl border border-dashed border-zinc-300 p-10 text-center text-sm text-zinc-500">
+              <p className="rounded-2xl border border-dashed border-neutral-300 p-10 text-center text-sm text-neutral-500">
                 No homes match the current filters.
               </p>
             )}
@@ -475,7 +475,7 @@ export function SearchResultsLayout() {
 
         <div className={showMap ? "block" : "hidden"}>
           <div className="px-4 pt-4 lg:sticky lg:top-[8.5rem] lg:h-[calc(100dvh-10rem)] lg:px-0 lg:pb-0 lg:pt-0">
-            <div className="h-[70dvh] min-h-[420px] overflow-hidden rounded-2xl border border-zinc-200 lg:h-full lg:rounded-none lg:border-0">
+            <div className="h-[70dvh] min-h-[420px] overflow-hidden rounded-2xl border border-neutral-200 lg:h-full lg:rounded-none lg:border-0">
               <MapView
                 markers={visibleItems.map((item) => ({
                   id: item.id,
@@ -498,12 +498,12 @@ export function SearchResultsLayout() {
 
       {selectedCount > 0 ? (
         <div className="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4">
-          <div className="pointer-events-auto flex items-center gap-5 rounded-2xl border border-zinc-200 bg-white py-3 pl-5 pr-3 shadow-[0_16px_40px_-16px_rgba(24,24,27,0.35)]">
+          <div className="pointer-events-auto flex items-center gap-5 rounded-2xl border border-neutral-200 bg-white py-3 pl-5 pr-3 shadow-panel">
             <div>
-              <p className="text-sm font-semibold text-zinc-900">
+              <p className="text-sm font-semibold text-neutral-900">
                 Consultar por varias
               </p>
-              <p className="text-xs text-zinc-500">
+              <p className="text-xs text-neutral-500">
                 {selectedCount}{" "}
                 {selectedCount === 1
                   ? "propiedad seleccionada"

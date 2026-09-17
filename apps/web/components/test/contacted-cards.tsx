@@ -1,17 +1,17 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { PropertyCard } from "@/components/PropertyCard/PropertyCard";
-import { Pagination } from "@/components/Pagination/Pagination";
-import { PropertySearchBar } from "@/components/filters/PropertySearchBar/PropertySearchBar";
-import { PriceRangeDropdown } from "@/components/filters/PriceRangeDropdown/PriceRangeDropdown";
-import { RoomsFilterDropdown } from "@/components/filters/RoomsFilterDropdown/RoomsFilterDropdown";
-import { PropertyTypeDropdown } from "@/components/filters/PropertyTypeDropdown/PropertyTypeDropdown";
-import { FilterChipButton } from "@/components/filters/FilterChipButton/FilterChipButton";
-import type { PriceRangeFilter } from "@/components/filters/PriceRangeDropdown/PriceRangeDropdown.types";
-import type { RoomsSelection } from "@/components/filters/RoomsFilterDropdown/RoomsFilterDropdown.types";
+import { PropertyCard } from "@/features/properties/PropertyCard/PropertyCard";
+import { Pagination } from "@/components/ui/Pagination/Pagination";
+import { PropertySearchBar } from "@/features/filters/PropertySearchBar/PropertySearchBar";
+import { PriceRangeDropdown } from "@/features/filters/PriceRangeDropdown/PriceRangeDropdown";
+import { RoomsFilterDropdown } from "@/features/filters/RoomsFilterDropdown/RoomsFilterDropdown";
+import { PropertyTypeDropdown } from "@/features/filters/PropertyTypeDropdown/PropertyTypeDropdown";
+import { FilterChipButton } from "@/features/filters/FilterChipButton/FilterChipButton";
+import type { PriceRangeFilter } from "@/features/filters/PriceRangeDropdown/PriceRangeDropdown.types";
+import type { RoomsSelection } from "@/features/filters/RoomsFilterDropdown/RoomsFilterDropdown.types";
 import { DEMO_PROPERTIES } from "@/components/test/property-card-fixtures";
-import type { Property, PropertyContactStatus } from "@/components/PropertyCard/PropertyCard.types";
+import type { Property, PropertyContactStatus } from "@/domain/property";
 
 const SLIDER_MIN = 500;
 const SLIDER_MAX = 3000;
@@ -204,7 +204,7 @@ export function ContactedCards() {
 
   return (
     <div>
-      <div className="border-b border-zinc-200 bg-white px-4 py-3 shadow-[0_4px_16px_-12px_rgba(24,24,27,0.2)] sm:px-6">
+      <div className="border-b border-neutral-200 bg-white px-4 py-3 shadow-toolbar sm:px-6">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-start">
           <div className="min-w-0 flex-1">
             <PropertySearchBar
@@ -261,7 +261,7 @@ export function ContactedCards() {
         </div>
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <span className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-400">
+          <span className="text-xs font-semibold uppercase tracking-[0.08em] text-neutral-400">
             Estado
           </span>
           {STATUS_FILTER_OPTIONS.map((option) => (
@@ -277,7 +277,7 @@ export function ContactedCards() {
 
       <div className="px-4 pt-6 sm:px-6">
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm text-zinc-600">
+          <p className="text-sm text-neutral-600">
             {visibleCount}{" "}
             {visibleCount === 1 ? "propiedad contactada" : "propiedades contactadas"}
             {visibleCount !== DEMO_PROPERTIES.length
@@ -288,7 +288,7 @@ export function ContactedCards() {
             <button
               type="button"
               onClick={handleClearFilters}
-              className="cursor-pointer rounded-full px-3 py-1.5 text-sm font-semibold text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500"
+              className="cursor-pointer rounded-full px-3 py-1.5 text-sm font-semibold text-neutral-500 transition-colors hover:bg-neutral-100 hover:text-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
             >
               Limpiar filtros
             </button>
@@ -320,7 +320,7 @@ export function ContactedCards() {
             </div>
           </>
         ) : (
-          <p className="rounded-2xl border border-dashed border-zinc-300 p-10 text-center text-sm text-zinc-500">
+          <p className="rounded-2xl border border-dashed border-neutral-300 p-10 text-center text-sm text-neutral-500">
             No hay propiedades que coincidan con los filtros.
           </p>
         )}

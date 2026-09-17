@@ -53,11 +53,11 @@ export function Footer() {
 
       <NewsletterForm />
 
-      <div className="bg-zinc-50">
+      <div className="bg-neutral-50">
         <div className="mx-auto grid max-w-[1640px] gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_2fr] lg:px-7">
           <div>
             <LogoWordmark />
-            <p className="mt-4 max-w-xs text-[14.5px] leading-relaxed text-zinc-600">
+            <p className="mt-4 max-w-xs text-[14.5px] leading-relaxed text-neutral-600">
               Lorem. Ipsum dolor. Sit amet consectetur adipiscing elit sed do eiusmod.
             </p>
             <ul className="mt-6 flex gap-3">
@@ -68,7 +68,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
                   >
                     <Icon width={20} height={20} />
                   </Link>
@@ -80,7 +80,7 @@ export function Footer() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {COLUMNS.map((col) => (
               <div key={col.title}>
-                <h3 className="text-[12.5px] font-bold uppercase tracking-[0.12em] text-zinc-500">
+                <h3 className="text-[12.5px] font-bold uppercase tracking-[0.12em] text-neutral-500">
                   {col.title}
                 </h3>
                 <ul className="mt-4 flex flex-col gap-3">
@@ -88,7 +88,7 @@ export function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-[14.5px] text-zinc-700 transition-colors hover:text-rose-500"
+                        className="text-[14.5px] text-neutral-700 transition-colors hover:text-brand-500"
                       >
                         {link.label}
                       </Link>
@@ -100,8 +100,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-zinc-200">
-          <div className="mx-auto flex max-w-[1640px] flex-col gap-2 px-4 py-6 text-[13px] text-zinc-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-7">
+        <div className="border-t border-neutral-200">
+          <div className="mx-auto flex max-w-[1640px] flex-col gap-2 px-4 py-6 text-[13px] text-neutral-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-7">
             <span>© {year} · Lorem ipsum dolor</span>
             <span>Lorem ipsum dolor sit amet consectetur adipiscing</span>
           </div>

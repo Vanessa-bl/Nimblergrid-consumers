@@ -19,7 +19,7 @@ export const AVATAR_PROPS: readonly DocProp[] = [
   {
     name: "tone?",
     description:
-      "rose (bg-rose-500, texto blanco) | dark (zinc-900) | light (blanco con borde) | muted (zinc-200). Default: rose. Solo aplica al fallback.",
+      "rose (bg-brand-500, texto blanco) | dark (neutral-900) | light (blanco con borde) | muted (neutral-200). Default: rose. Solo aplica al fallback.",
   },
   {
     name: "alt?",
@@ -37,7 +37,7 @@ export const USER_PROFILE_CARD_PROPS: readonly DocProp[] = [
   {
     name: "data?",
     description:
-      "UserProfileData (id, name, phone, email, avatarUrl?) o null. Sin datos y sin carga se muestra el estado vacío informativo. Default: null. Los adapters supabaseProfileToUserData y magentoCustomerToUserData (en .types.ts) convierten filas reales a este modelo.",
+      "UserProfileData (id, name, phone, email, avatarUrl?) o null. Sin datos y sin carga se muestra el estado vacío informativo. Default: null. Los adapters supabaseProfileToUserData y magentoCustomerToUserData (en domain/user-profile.ts) convierten filas reales a este modelo.",
   },
   {
     name: "title?",

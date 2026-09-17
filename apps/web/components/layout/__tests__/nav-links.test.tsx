@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { NavLinks } from "@/components/layout/nav-links";
-import type { NavItem } from "@/lib/prismic/navigation";
+import type { NavItem } from "@/domain/navigation";
 
 const items: NavItem[] = [
   { href: "/buy", label: "Buy", external: false },
